@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import ConIcon from "./ConIcon";
 
 function ImgCarousel() {
   const [autoPlay, setAutoPlay] = useState(true);
@@ -36,6 +35,9 @@ function ImgCarousel() {
         showArrows={showArrows}
         swipeable={swipeable}
       >
+
+
+        {/* VIDEO #1 */}
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
@@ -48,6 +50,9 @@ function ImgCarousel() {
             onMouseLeave={() => setAutoPlay(true)}
           />
         </div>
+
+
+        {/* IMAGE in Carousel */}
         <div className="relative h-[95vh] ">
           <img
             className="h-full w-full"
@@ -60,16 +65,9 @@ function ImgCarousel() {
                 <p className="pt-6 xs:pt-4 text-2xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold gravesendSans">
                   DISCOVER LUXURY <br /> EMBRACE NATURE
                 </p>
-                <p className="py-2 xs:py-4 text-xl xs:text-2xl lg:text-3xl xl:text-4xl pb-10 gravesendSans">
+                <p className="py-2 xs:py-4 text-[52px] xs:text-2xl lg:text-3xl xl:text-4xl pb-10 font-regular font-helvetica">
                   Serene Heights Nathia Gali <br /> Hotels & Resorts
                 </p>
-              </div>
-              <div className=" hidden md:block">
-                <ConIcon
-                  bgColor={"bg-black/40 hover:bg-white/60"}
-                  direction={"column"}
-                  padding={"p-4"}
-                />
               </div>
             </div>
 
@@ -82,7 +80,7 @@ function ImgCarousel() {
                 />
               </div>
 
-              <div className="bg-[#63636380]/50 p-4 border-s-2 backdrop-blur-sm border-[#E8FF61] rounded-md inter">
+              <div className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md helveticaNeue font-medium">
                 <ul className="text-left">
                   <li>
                     • Monthly Rental Income After <br />{" "}
@@ -95,6 +93,8 @@ function ImgCarousel() {
           </div>
         </div>
 
+
+      {/* VIDEO #2 */}
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
@@ -103,8 +103,8 @@ function ImgCarousel() {
             preload="auto"
             muted
             loop
-            onMouseEnter={() => setAutoPlay(false)} // Stop autoplay when hovering over the video
-            onMouseLeave={() => setAutoPlay(true)} // Resume autoplay when leaving the video
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
           />
         </div>
       </Carousel>

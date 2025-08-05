@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -33,6 +34,9 @@ export default {
       },
       screens: {
         xs: "378px",
+      },
+      fontFamily: {
+        helvetica: ['"Helvetica Neue LT Std"', 'sans-serif'],
       },
     },
   },
