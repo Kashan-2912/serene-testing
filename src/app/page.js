@@ -1,9 +1,9 @@
 "use client";
 import ImgCarousel from "@/components/carousel/ImgCarousel";
 import ContactUs from "@/components/contactUs/ContactUs";
-import ImageGrid from "@/components/imageGrid/ImageGrid";
-import LocationCards from "@/components/loctaionCards/LocationCards";
-import LoopImages from "@/components/loopImages/LoopImages";
+import ImageGrid from "@/components/ImageGrid";
+import LocationCards from "@/components/LocationCards";
+import LoopImages from "@/components/LoopImages";
 import { locationElements } from "@/utils/constants/locationElements";
 import { Icon } from "@iconify-icon/react";
 import { motion } from "framer-motion";

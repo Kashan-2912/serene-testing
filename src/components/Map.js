@@ -15,7 +15,7 @@ const center = {
 
 function SimpleMap() {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyDBaXzGlhT08HbNVAY3TgakhBS3DJMX-Bw",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
   if (!isLoaded) {

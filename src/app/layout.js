@@ -14,7 +14,7 @@ import Footer from "@/components/footer/Footer";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { Icon } from "@iconify-icon/react";
-import ConIcon from "@/components/conIcon/ConIcon";
+import ConIcon from "@/components/ConIcon";
 import {Analytics} from "@vercel/analytics/next"
 
 const gravesendSans = localFont({
