@@ -84,7 +84,7 @@ function ContactUs({ orbitron, montserrat }) {
                 </div>
               </div>
               <div className="flex flex-col popping">
-                <label htmlFor="message" className="text-sm">
+                <label htmlFor="message" className="text-sm text-[#222222] font-medium">
                   Message
                 </label>
                 <Field
@@ -107,7 +107,7 @@ function ContactUs({ orbitron, montserrat }) {
               >
                 <span className="absolute h-0 w-0 rounded-full bg-[#37584F] transition-all duration-500 ease-out group-hover:h-56 group-hover:w-56"></span>
                 <span className="absolute inset-0 -mt-1 h-full w-full rounded-lg bg-gradient-to-b from-transparent via-transparent to-gray-700 opacity-30"></span>
-                <span className="relative popping tracking-wide  ">
+                <span className="relative poppins tracking-wide  ">
                   {loading ? (
                     <RingLoader color="white" size={30} />
                   ) : (

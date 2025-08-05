@@ -200,7 +200,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="my-28"
+            className="my-0"
           >
             <p className="text-3xl sm:text-5xl font-bold gravesendSans">
               DISCOVER SERENE HEIGHTS <br /> IN NATHIA GALI
@@ -276,8 +276,8 @@ export default function Home() {
         </div>
 
         {/* <-------- Section# 5 --------> */}
-        <div className="relativ ">
-          <div className="md:absolut flex flex-col justify-center items-center backdrop-blur pb-10  px-10 md:px-28 text-center  w-full  ">
+        <div className="relative ">
+          <div className="md:absolute flex flex-col justify-center items-center backdrop-blur pb-10  px-10 md:px-28 text-center  w-full  ">
             <p className="text-4xl lg:text-5xl font-semibold py-4 gravesendSans">
               EVERY DESIRE ON YOUR DOORSTEP
             </p>
@@ -322,31 +322,31 @@ export default function Home() {
 
         {/* <-------- Section# 7 --------> */}
         <div className="text-center lg:px-36 md:px-20 xs:px-6 ">
-          <p className="sm:text-5xl text-4xl font-bold py-8 gravesendSans">
+          <p className="sm:text-5xl text-4xl font-bold py-32 gravesendSans">
             ENQUIRE NOW
           </p>
           <div className="flex flex-col px-4 sm:px-0 md:flex-row justify-center items-center gap-4">
             <div className="text-left :text-lg  w-full md:w-[40%] font-medium popping">
               <p className="sm:text-4xl text-3xl py-4">Contact Information</p>
               <div className="border-b-4 rounded-full border-b-[#37584F] w-[20%]"></div>
-              <p className="py-4 sm:text-2xl text-xl">
+              <p className="py-4 sm:text-2xl text-xl text-[#222222] opacity-80">
                 Any question or remarks? Just <br /> write us a message!
               </p>
               <div className=" flex gap-4 items-center py-4">
                 <Icon icon="mdi:phone-classic" width="24" height="24" />
-                <p className="sm:text-xl md:text-lg text-base">
+                <p className="sm:text-xl md:text-lg text-base text-[#222222]">
                   042-111-111-744
                 </p>
               </div>
               <div className=" flex  gap-4 items-center py-4">
                 <Icon icon="ic:baseline-local-phone" width="24" height="24" />
-                <p className="sm:text-xl md:text-lg text-base">
+                <p className="sm:text-xl md:text-lg text-base text-[#222222]">
                   +92 300 8497999
                 </p>
               </div>
               <div className=" flex gap-4 items-center py-4">
                 <Icon icon="ic:baseline-mail" width="24" height="24" />
-                <p className="sm:text-xl md:text-lg text-base">
+                <p className="sm:text-xl md:text-lg text-base text-[#222222]">
                   info@sereneheightsnathiagali.com
                 </p>
               </div>

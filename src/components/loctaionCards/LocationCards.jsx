@@ -22,15 +22,15 @@ import React from "react";
 
 function LocationCards({ title, distance }) {
   return (
-    <div className="w-full h-full text-left flex gap-4 pl-6 items-center rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex-shrink-0 flex-grow">
+    <div className="w-full h-full text-left flex gap-4 pl-6 items-center rounded-[10px] shadow-[0px_0px_4px_0px_#00000040] flex-shrink-0 flex-grow">
       <img
         src="/assets/home/location/locationIcon.png"
         className="h-14 object-cover flex-shrink-0"
         alt="locationIcon"
       />
       <div className="py-2 flex-grow">
-        <p>{title}</p>
-        <p>{distance}</p>
+        <p className="font-[Poppins] font-medium text-[30px] text-[#000000]">{title}</p>
+        <p className="font-[Poppins] font-medium text-[22px] text-[#000000] leading=[135%] opacity-70">{distance}</p>
       </div>
     </div>
   );

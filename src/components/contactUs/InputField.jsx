@@ -4,7 +4,7 @@ import React from "react";
 function InputField({ label, placeholder, type, name }) {
   return (
     <div className="z-10 w-full flex flex-col  popping">
-      <label className="text-sm  ">{label}</label>
+      <label className="text-sm text-[#222222] font-medium">{label}</label>
       <Field
         type={type}
         placeholder={placeholder}
