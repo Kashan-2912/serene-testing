@@ -39,13 +39,12 @@ function ImgCarousel() {
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
-            // src="/assets/carousel/landingVideo.mp4"
             src="https://ik.imagekit.io/dueovwndo/landingVideo.mp4?updatedAt=1754379708832"
             autoPlay
             muted
             loop
-            onMouseEnter={() => setAutoPlay(false)} // Stop autoplay when hovering over the video
-            onMouseLeave={() => setAutoPlay(true)} // Resume autoplay when leaving the video
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
           />
         </div>
         <div className="relative h-[95vh] ">
@@ -94,10 +93,10 @@ function ImgCarousel() {
             </div>
           </div>
         </div>
+
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
-            // src="/assets/carousel/landingVideo2.mp4"
             src="https://ik.imagekit.io/dueovwndo/landingVideo2.mp4?updatedAt=1754379709113"
             autoPlay
             muted
