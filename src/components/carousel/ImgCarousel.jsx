@@ -39,8 +39,9 @@ function ImgCarousel() {
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
-            src="https://ik.imagekit.io/dueovwndo/landingVideo.mp4?updatedAt=1754379708832"
+            src="https://ik.imagekit.io/dueovwndo/landingVideo.mp4?updatedAt=1754382936223"
             autoPlay
+            preload="auto"
             muted
             loop
             onMouseEnter={() => setAutoPlay(false)}
@@ -97,8 +98,9 @@ function ImgCarousel() {
         <div className="relative h-[95vh]">
           <video
             className="h-full w-full object-cover"
-            src="https://ik.imagekit.io/dueovwndo/landingVideo2.mp4?updatedAt=1754379709113"
+            src="https://ik.imagekit.io/dueovwndo/landingVideo2.mp4?updatedAt=1754382936153"
             autoPlay
+            preload="auto"
             muted
             loop
             onMouseEnter={() => setAutoPlay(false)} // Stop autoplay when hovering over the video

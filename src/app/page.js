@@ -162,7 +162,7 @@ export default function Home() {
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
           >
             <video
-              src="/assets/home/videoL/laerialnew.mp4"
+              src="https://ik.imagekit.io/dueovwndo/optimized-laerialnew.mp4?updatedAt=1754382935743"
               width="1300"
               height="600"
               controls
