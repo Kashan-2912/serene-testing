@@ -1,6 +1,7 @@
 "use client";
 
 import ImgCarousel from "@/components/ImgCarousel";
+import Section1 from "@/components/Section1";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -14,91 +15,8 @@ export default function Home() {
       </div>
 
       <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10  py-20">
-
         {/* Home Page Section 1 (Right below Hero)  */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-24">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <p className="text-4xl sm:text-5xl  font-bold tracking-wide  gravesendSans">
-              DISCOVER
-              <br /> REFINED LUXURY
-            </p>
-            <p className="my-2 pl- text-2xl sm:text-4xl text-[#37584F]/80  tracking-wide  gravesendSans">
-              AT OUR EXCLUSIVE RESORT <br /> AND HOTEL
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mb-3"
-              >
-                <Image
-                  src="/assets/home/image1.png"
-                  alt="img"
-                  width={170}
-                  height={220}
-                  className="rounded-[10px]"
-                  priority
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              >
-                <Image
-                  src="/assets/home/image2.png"
-                  alt="img"
-                  width={170}
-                  height={140}
-                  className="rounded-[10px]"
-                  priority
-                />
-              </motion.div>
-            </div>
-
-            <div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              >
-                <Image
-                  src="/assets/home/image3.png"
-                  alt="img"
-                  width={170}
-                  height={140}
-                  className="rounded-[10px]"
-                  priority
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-                className="mt-3"
-              >
-                <Image
-                  src="/assets/home/image4.png"
-                  alt="img"
-                  width={170}
-                  height={220}
-                  className="rounded-[10px]"
-                  priority
-                />
-              </motion.div>
-            </div>
-          </div>
-        </div>
+        <Section1 />
       </div>
     </div>
   );
