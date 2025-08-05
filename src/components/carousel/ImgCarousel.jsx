@@ -1,20 +1,56 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import ConIcon from "../conIcon/ConIcon";
-import MuxPlayer from "@mux/mux-player-react/lazy";
+
+function LazyVideo({ src, className, onMouseEnter, onMouseLeave }) {
+  const videoRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={videoRef} className="h-full w-full">
+      {isVisible ? (
+        <video
+          className={className}
+          src={src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
+      ) : (
+        <div className={`${className} bg-black`} /> // fallback while loading
+      )}
+    </div>
+  );
+}
 
 function ImgCarousel() {
   const [autoPlay, setAutoPlay] = useState(true);
   const [swipeable, setSwipeable] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
-  // const [currentSlide, setCurrentSlide] = useState(0);
-
-  const MUX_PLAYBACK_IDS = {
-    video1: "Pys3YGVs1Yolb01myppmfkkt4asE02iQJhHASICW9DWnU",
-    video2: "xrSytFXHxtiL3G1KFPbPtFyeFt02cX62YyDOnevQxoMo",
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,40 +60,30 @@ function ImgCarousel() {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="fixed top-0 left-0 w-[100%] h-screen">
       <Carousel
-        // onChange={(index) => setCurrentSlide(index)}
         autoPlay={autoPlay}
         className="h-[95vh] w-full"
         showThumbs={false}
         infiniteLoop
         centerMode
         centerSlidePercentage={100}
-        interval={4000} // Adjust the autoplay speed
+        interval={4000}
         showStatus={false}
         showArrows={showArrows}
         swipeable={swipeable}
       >
         <div className="relative h-[95vh]">
-          {/* {currentSlide === 0 ? ( */}
-            <MuxPlayer
-            playbackId={MUX_PLAYBACK_IDS.video1}
-            streamType="on-demand"
-              className="h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              onMouseEnter={() => setAutoPlay(false)}
-              onMouseLeave={() => setAutoPlay(true)}
-            />
-          {/* ) : ( */}
-            {/* <div className="h-full w-full bg-black" /> // blank slide placeholder */}
-          {/* )} */}
+          <LazyVideo
+            className="h-full w-full object-cover"
+            src="/assets/carousel/landingVideo.mp4"
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
+          />
         </div>
 
         <div className="relative h-[95vh] ">
@@ -97,7 +123,7 @@ function ImgCarousel() {
               <div className="bg-[#63636380]/50 p-4 border-s-2 backdrop-blur-sm border-[#E8FF61] rounded-md inter">
                 <ul className="text-left">
                   <li>
-                    • Monthly Rental Income After <br />{" "}
+                    • Monthly Rental Income After <br />
                     <span className="pl-3">Operations</span>
                   </li>
                   <li>• Free 28 Nights Stay Annually</li>
@@ -108,20 +134,12 @@ function ImgCarousel() {
         </div>
 
         <div className="relative h-[95vh]">
-          {/* {currentSlide === 2 ? ( */}
-            <MuxPlayer
-              playbackId={MUX_PLAYBACK_IDS.video2}
-              streamType="on-demand"
-              className="h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              onMouseEnter={() => setAutoPlay(false)}
-              onMouseLeave={() => setAutoPlay(true)}
-            />
-          {/* // ) : (
-          //   <div className="h-full w-full bg-black" />
-          // )} */}
+          <LazyVideo
+            className="h-full w-full object-cover"
+            src="/assets/carousel/landingVideo2.mp4"
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
+          />
         </div>
       </Carousel>
     </div>
