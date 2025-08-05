@@ -1,9 +1,13 @@
 "use client";
 
 import ImgCarousel from "@/components/ImgCarousel";
-import Section1 from "@/components/Section1";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Section1 from "@/components/Sections/Section1";
+import Section2 from "@/components/Sections/Section2";
+import Section3 from "@/components/Sections/Section3";
+import Section4 from "@/components/Sections/Section4";
+import Section5 from "@/components/Sections/Section5";
+import Section6 from "@/components/Sections/Section6";
+import Section7 from "@/components/Sections/Section7";
 
 export default function Home() {
   return (
@@ -15,8 +19,13 @@ export default function Home() {
       </div>
 
       <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10  py-20">
-        {/* Home Page Section 1 (Right below Hero)  */}
         <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
       </div>
     </div>
   );
