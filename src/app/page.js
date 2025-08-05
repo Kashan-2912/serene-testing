@@ -1,6 +1,6 @@
 "use client";
-import ImgCarousel from "@/components/carousel/ImgCarousel";
-import ContactUs from "@/components/contactUs/ContactUs";
+import ImgCarousel from "@/components/ImgCarousel";
+import ContactUs from "@/components/ContactUs";
 import ImageGrid from "@/components/ImageGrid";
 import LocationCards from "@/components/LocationCards";
 import LoopImages from "@/components/LoopImages";

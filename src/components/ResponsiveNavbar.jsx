@@ -63,7 +63,7 @@ import { useRouter } from "next/navigation";
 import { FaChevronRight } from "react-icons/fa";
 import { elements } from "@/utils/constants/navElements";
 import { Icon } from "@iconify-icon/react";
-import ConIcon from "../ConIcon";
+import ConIcon from "./ConIcon";
 import Link from "next/link";
 
 const SidebarMenu = ({ setShow }) => {

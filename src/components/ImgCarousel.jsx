@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import ConIcon from "../conIcon/ConIcon";
+import ConIcon from "./ConIcon";
 
 function ImgCarousel() {
   const [autoPlay, setAutoPlay] = useState(true);

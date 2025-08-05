@@ -2,9 +2,9 @@
 import { Icon } from "@iconify-icon/react";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
-import { elements } from "../../utils/constants/navElements";
+import { elements } from "@/utils/constants/navElements";
 import { usePathname, useRouter } from "next/navigation";
-import ResponsiveNavbar from "../responsiveNavbar/ResponsiveNavbar";
+import ResponsiveNavbar from "./ResponsiveNavbar"
 
 function Navbar() {
   const [show, setShow] = useState(false);
