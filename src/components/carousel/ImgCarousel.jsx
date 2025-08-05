@@ -3,12 +3,18 @@ import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import ConIcon from "../conIcon/ConIcon";
+import MuxPlayer from "@mux/mux-player-react/lazy";
 
 function ImgCarousel() {
   const [autoPlay, setAutoPlay] = useState(true);
   const [swipeable, setSwipeable] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+
+  const MUX_PLAYBACK_IDS = {
+    video1: "Pys3YGVs1Yolb01myppmfkkt4asE02iQJhHASICW9DWnU",
+    video2: "xrSytFXHxtiL3G1KFPbPtFyeFt02cX62YyDOnevQxoMo",
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +31,7 @@ function ImgCarousel() {
   return (
     <div className="fixed top-0 left-0 w-[100%] h-screen">
       <Carousel
-        onChange={(index) => setCurrentSlide(index)}
+        // onChange={(index) => setCurrentSlide(index)}
         autoPlay={autoPlay}
         className="h-[95vh] w-full"
         showThumbs={false}
@@ -38,20 +44,20 @@ function ImgCarousel() {
         swipeable={swipeable}
       >
         <div className="relative h-[95vh]">
-          {currentSlide === 0 ? (
-            <video
+          {/* {currentSlide === 0 ? ( */}
+            <MuxPlayer
+            playbackId={MUX_PLAYBACK_IDS.video1}
+            streamType="on-demand"
               className="h-full w-full object-cover"
-              src="/assets/carousel/landingVideo.mp4"
               autoPlay
               muted
               loop
-              preload="auto"
               onMouseEnter={() => setAutoPlay(false)}
               onMouseLeave={() => setAutoPlay(true)}
             />
-          ) : (
-            <div className="h-full w-full bg-black" /> // blank slide placeholder
-          )}
+          {/* ) : ( */}
+            {/* <div className="h-full w-full bg-black" /> // blank slide placeholder */}
+          {/* )} */}
         </div>
 
         <div className="relative h-[95vh] ">
@@ -102,20 +108,20 @@ function ImgCarousel() {
         </div>
 
         <div className="relative h-[95vh]">
-          {currentSlide === 2 ? (
-            <video
+          {/* {currentSlide === 2 ? ( */}
+            <MuxPlayer
+              playbackId={MUX_PLAYBACK_IDS.video2}
+              streamType="on-demand"
               className="h-full w-full object-cover"
-              src="/assets/carousel/landingVideo2.mp4"
               autoPlay
               muted
               loop
-              preload="auto"
               onMouseEnter={() => setAutoPlay(false)}
               onMouseLeave={() => setAutoPlay(true)}
             />
-          ) : (
-            <div className="h-full w-full bg-black" />
-          )}
+          {/* // ) : (
+          //   <div className="h-full w-full bg-black" />
+          // )} */}
         </div>
       </Carousel>
     </div>
