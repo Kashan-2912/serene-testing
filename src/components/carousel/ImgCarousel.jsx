@@ -80,7 +80,7 @@ function ImgCarousel() {
         <div className="relative h-[95vh]">
           <LazyVideo
             className="h-full w-full object-cover"
-            src="/assets/carousel/landingVideo.mp4"
+            src="/assets/carousel/optimized-landingVideo.mp4"
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
           />
@@ -136,7 +136,7 @@ function ImgCarousel() {
         <div className="relative h-[95vh]">
           <LazyVideo
             className="h-full w-full object-cover"
-            src="/assets/carousel/landingVideo2.mp4"
+            src="/assets/carousel/optimized-landingVideo2.mp4"
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
           />
