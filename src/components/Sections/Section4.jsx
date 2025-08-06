@@ -10,10 +10,10 @@ const Section4 = () => {
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         className="my-28"
       >
-        <p className="text-3xl sm:text-5xl font-bold gravesendSans">
+        <p className="text-3xl sm:text-5xl text-[#37584F] font-bold gravesendSans">
           DISCOVER SERENE HEIGHTS <br /> IN NATHIA GALI
         </p>
-        <p className="py-8 px inter text-[#222222]">
+        <p className="py-8 px text-[#222222] inter">
           Serene Heights Nathia Gali, nestled near PAF’s Kalabagh Airbase,
           offers secure, scenic living amidst alpine forests, with unobstructed
           valley views. Minutes from Nathia Gali Main Bazar, this resort-style
