@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const Section2 = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-      className="my-32 lg:px-36 md:px-20 px-4 py-0 xs:py-16 text-center"
+      className="my-8 lg:px-36 md:px-20 px-4 py-0 xs:py-16 text-center"
     >
       <p className="text-4xl sm:text-5xl font-bold gravesendSans">
         PAKISTAN’S FIRST AND LARGEST <br /> WINTER RESORT.

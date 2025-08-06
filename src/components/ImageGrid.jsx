@@ -251,7 +251,7 @@ function ImageGrid() {
 
       <div
         ref={ref}
-        className="pb-32 hidden xs:flex absolut  top- z-10 rounded-2xl text-white text-6xl text-center font-bold flex-col justify-center h-full w-full pointer-events-none"
+        className="pb-12 hidden xs:flex absolut z-10 rounded-2xl text-white text-6xl xs:text-[38px] text-center font-bold flex-col justify-center h-full w-full pointer-events-none"
       >
         <motion.div
           variants={typingVariants}

@@ -4,6 +4,7 @@ import { elements } from "@/utils/constants/navElements";
 import { Icon } from "@iconify-icon/react";
 import ConIcon from "./ConIcon";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const SidebarMenu = ({ setShow }) => {
   const [openMenu, setOpenMenu] = useState(null);

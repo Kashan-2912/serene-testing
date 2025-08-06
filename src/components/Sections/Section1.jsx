@@ -6,7 +6,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-24">
+    <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-8">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ const Section1 = () => {
           DISCOVER
           <br /> REFINED LUXURY
         </p>
-        <p className="my-2 pl- text-2xl sm:text-4xl text-[#37584F]/80  tracking-wide  gravesendSans">
+        <p className="my-2 text-2xl sm:text-4xl text-[#37584F]/80  tracking-wide font-helvetica font-medium">
           AT OUR EXCLUSIVE RESORT <br /> AND HOTEL
         </p>
       </motion.div>
