@@ -243,7 +243,7 @@ function ImageGrid() {
   }, [isXsScreen]);
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="block xs:hidden text-[#37584F] text-center text-3xl font-bold gravesendSans">
         <p> A HAVEN IN THE</p>
         <p> HIGHLANDS</p>

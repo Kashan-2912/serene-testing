@@ -18,7 +18,7 @@ export default function Home() {
         <ImgCarousel />
       </div>
 
-      <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10  py-20">
+      <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10 py-20">
         <Section1 />
         <Section2 />
         <Section3 />
