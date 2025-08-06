@@ -168,14 +168,14 @@ const MotionImage = ({
       />
       {src === "frame4.png" ? (
         <Image
-          src="/assets/logo/logo.png" // Replace with the actual path of the new image
+          src="/assets/logo/logo.png"
           alt="Alternative Image"
-          width={300} // Adjust the width as needed
-          height={300} // Adjust the height as needed
+          width={300}
+          height={300}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       ) : (
-        <div className="absolute top-0 flex flex-col justify-center items-center text-center w-full h-full text-white px-44 md:px-6 lg:px-16 xl:px-24">
+        <div className="absolute top-0 flex flex-col justify-center items-center text-center w-full h-full text-white px-30 md:px-6 lg:px-16 xl:px-24">
           <p className="cinzel text-3xl  xl:text-5xl 2xl:text-7xl font-medium">
             {textNum}
           </p>
@@ -251,7 +251,7 @@ function ImageGrid() {
 
       <div
         ref={ref}
-        className="pb-32 hidden xs:flex absolut z-10 rounded-2xl text-white text-6xl xs:text-[38px] text-center font-bold flex-col justify-center h-full w-full pointer-events-none"
+        className="pb-32 hidden xs:flex absolut z-10 rounded-2xl text-white text-6xl text-center font-bold flex-col justify-center h-full w-full pointer-events-none"
       >
         <motion.div
           variants={typingVariants}
@@ -326,10 +326,6 @@ function ImageGrid() {
               ))}
             </div>
           </div>
-
-          {/* <div className="absolute rounded-2xl text-white text-4xl sm:text-6xl text-center font-bold flex flex-col justify-center items-center h-full w-full bg-[#37584F]/40 pointer-events-none">
-          A HAVEN IN THE<span>HIGHLANDS</span>
-        </div> */}
         </div>
       </div>
     </div>
