@@ -211,11 +211,13 @@ export default function Home() {
             <div className="relative w-full h-full overflow-hidden">
               <img
                 src="/assets/home/location/location.png"
+                // width={"500"}
+                // height={"500"}
                 alt="location"
-                className="object-contain w-full h-full"
+                className="object-cover w-full h-full rounded-xl shadow-[0_0_6px_0_#00000040]
+"
               />
             </div>
-
             {/* Cards section */}
             <div className="h-full flex flex-col gap-4 py-2">
               {locationElements.map((loc, index) => (
