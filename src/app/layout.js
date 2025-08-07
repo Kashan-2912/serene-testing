@@ -9,12 +9,12 @@ import {
   Cinzel,
 } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { Icon } from "@iconify-icon/react";
-import ConIcon from "@/components/ConIcon";
+import ConIcon from "@/components/conIcon/ConIcon";
 import {Analytics} from "@vercel/analytics/next"
 
 const gravesendSans = localFont({

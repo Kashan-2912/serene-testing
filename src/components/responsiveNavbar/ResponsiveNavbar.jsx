@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { elements } from "@/utils/constants/navElements";
 import { Icon } from "@iconify-icon/react";
-import ConIcon from "./ConIcon";
+import ConIcon from "../conIcon/ConIcon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

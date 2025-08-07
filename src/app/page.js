@@ -1,13 +1,14 @@
 "use client";
 
-import ImgCarousel from "@/components/ImgCarousel";
-import Section1 from "@/components/Sections/Section1";
-import Section2 from "@/components/Sections/Section2";
-import Section3 from "@/components/Sections/Section3";
-import Section4 from "@/components/Sections/Section4";
-import Section5 from "@/components/Sections/Section5";
-import Section6 from "@/components/Sections/Section6";
-import Section7 from "@/components/Sections/Section7";
+import ImgCarousel from "@/components/carousel/ImgCarousel";
+import ContactUs from "@/components/contactUs/ContactUs";
+import ImageGrid from "@/components/imageGrid/ImageGrid";
+import LocationCards from "@/components/locationCards/LocationCards";
+import LoopImages from "@/components/loopImages/LoopImages";
+import { locationElements } from "@/utils/constants/locationElements";
+import { Icon } from "@iconify-icon/react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -19,13 +20,272 @@ export default function Home() {
       </div>
 
       <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10 py-20">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
+        {/* <Section1 /> */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <p className="text-4xl sm:text-5xl  font-bold tracking-wide  gravesendSans">
+              DISCOVER
+              <br /> REFINED LUXURY
+            </p>
+            <p className="my-2 text-2xl sm:text-4xl text-[#37584F]/80  tracking-wide font-helvetica font-medium">
+              AT OUR EXCLUSIVE RESORT <br /> AND HOTEL
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="mb-3"
+              >
+                <Image
+                  src="/assets/home/image1.png"
+                  alt="img"
+                  width={170}
+                  height={220}
+                  className="rounded-[10px]"
+                  priority
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              >
+                <Image
+                  src="/assets/home/image2.png"
+                  alt="img"
+                  width={170}
+                  height={140}
+                  className="rounded-[10px]"
+                  priority
+                />
+              </motion.div>
+            </div>
+
+            <div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              >
+                <Image
+                  src="/assets/home/image3.png"
+                  alt="img"
+                  width={170}
+                  height={140}
+                  className="rounded-[10px]"
+                  priority
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                className="mt-3"
+              >
+                <Image
+                  src="/assets/home/image4.png"
+                  alt="img"
+                  width={170}
+                  height={220}
+                  className="rounded-[10px]"
+                  priority
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* <Section2 /> */}
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="my-8 lg:px-36 md:px-20 px-4 py-0 xs:py-16 text-center"
+        >
+          <p className="text-4xl sm:text-5xl font-bold gravesendSans">
+            PAKISTAN’S FIRST AND LARGEST <br /> WINTER RESORT.
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+          >
+            <video
+              src="/assets/home/videoL/laerialnew.mp4"
+              width="1300"
+              height="600"
+              controls
+              autoPlay
+              loop
+              muted
+              className="mt-6 w-full rounded-2xl "
+            />
+          </motion.div>
+        </motion.div>
+
+
+        {/* <Section3 /> */}
+        <div className="w-full pt-0 xs:pt-6  ">
+          <ImageGrid />
+        </div>
+
+
+        {/* <Section4 /> */}
+        <div className="text-center sm:pb-24  pb-0  sm:px-20 px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            className="my-28"
+          >
+            <p className="text-3xl sm:text-5xl text-[#37584F] font-bold gravesendSans">
+              DISCOVER SERENE HEIGHTS <br /> IN NATHIA GALI
+            </p>
+            <p className="py-8 px text-[#222222] inter">
+              Serene Heights Nathia Gali, nestled near PAF’s Kalabagh Airbase,
+              offers secure, scenic living amidst alpine forests, with unobstructed
+              valley views. Minutes from Nathia Gali Main Bazar, this resort-style
+              retreat provides peace, modern amenities, and breathtaking sunsets,
+              making it your dream summer home.
+            </p>
+
+            {/* Main Image Container */}
+            <div className="relative w-full max-w-[1400px] mx-auto mt-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+                className="relative w-full"
+              >
+                <iframe
+                  width="1200"
+                  height="600"
+                  src="https://www.youtube.com/embed/hgdClMWb6rE"
+                  title="YouTube Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full rounded-2xl"
+                ></iframe>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+
+        {/* <Section5 /> */}
+        <div className="relativ ">
+          <div className="md:absolut flex flex-col justify-center items-center backdrop-blur pb-10  px-10 md:px-28 text-center  w-full  ">
+            <p className="text-4xl lg:text-5xl font-semibold py-4 gravesendSans">
+              EVERY DESIRE ON YOUR DOORSTEP
+            </p>
+            <p className="font-medium inter">
+              Indulge in unparalleled luxury at our esteemed hotel & resort.
+              <br />
+              Experience opulent comfort, exquisite dining, and refined
+              accommodations.{" "}
+            </p>
+          </div>
+          <LoopImages />
+        </div>
+
+
+        {/* <Section6 /> */}
+        <div className="text-center bg-[url('/assets/home/location/bgMap.png')] bg-cover bg-no-repeat w-full lg:px-36 md:px-20 xs:px-6 mb-20 pt-20">
+          <p className="sm:text-5xl text-4xl font-bold py-10 gravesendSans">
+            Location
+          </p>
+          <div className="grid h-full px-3 sm:px-0 lg:h-[80vh] grid-cols-1 md:grid-cols-2 gap-6 py-10">
+            {/* Image section */}
+            <div className="relative w-full h-full overflow-hidden">
+              <img
+                src="/assets/home/location/location.png"
+                alt="location"
+                className="object-contain w-full h-full"
+              />
+            </div>
+
+            {/* Cards section */}
+            <div className="h-full flex flex-col gap-4 py-2">
+              {locationElements.map((loc, index) => (
+                <div
+                  key={index}
+                  className="h-full flex-1 bg-white cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+                >
+                  <LocationCards title={loc.title} distance={loc.distance} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        {/* <Section7 /> */}
+        <div className="text-center lg:px-36 md:px-20 xs:px-6 ">
+          <p className="sm:text-5xl text-4xl font-bold py-8 gravesendSans">
+            ENQUIRE NOW
+          </p>
+          <div className="flex flex-col px-4 sm:px-0 md:flex-row gap-4">
+            <div className="text-left :text-lg  w-full md:w-[40%] font-medium popping">
+              <p className="sm:text-4xl text-3xl py-4">Contact Information</p>
+              <div className="border-b-4 rounded-full border-b-[#37584F] w-[20%]"></div>
+              <p className="py-6 sm:text-xl text-2xl text-[#222222] poppins opacity-80">
+                Any question or remarks? Just <br /> write us a message!
+              </p>
+              <div className="flex flex-col gap-4 text-[#222222] font-medium">
+                <div className="flex items-center gap-3">
+                  <Icon
+                    icon="mdi:phone-classic"
+                    width="24"
+                    height="24"
+                    color="#37584F"
+                  />
+                  <p className="text-[14px] md:text-[16px] lg:text-[18px]">
+                    042-111-111-744
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Icon
+                    icon="ic:baseline-local-phone"
+                    width="24"
+                    height="24"
+                    color="#37584F"
+                  />
+                  <p className="text-[14px] md:text-[16px] lg:text-[18px]">
+                    +92 300 8497999
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Icon
+                    icon="ic:baseline-mail"
+                    width="24"
+                    height="24"
+                    color="#37584F"
+                  />
+                  <p className="text-[14px] md:text-[16px] lg:text-[18px] break-all">
+                    info@sereneheightsnathiagali.com
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[60%]">
+              <ContactUs />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
