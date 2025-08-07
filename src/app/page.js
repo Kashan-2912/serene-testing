@@ -21,7 +21,7 @@ export default function Home() {
 
       <div className="relative text-[#37584F] bg-white mt-[100vh] w-full z-10 py-20">
         {/* <Section1 /> */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-8">
+        <div className="flex flex-col md:flex-row gap-4 justify-center sm:justify-around items-center px-4 xs:px-8 py-28">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
