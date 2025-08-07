@@ -148,7 +148,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="my-28"
+            className="my-28 lg:px-36 md:px-20 px-4"
           >
             <p className="text-3xl sm:text-5xl text-[#37584F] font-bold gravesendSans">
               DISCOVER SERENE HEIGHTS <br /> IN NATHIA GALI
