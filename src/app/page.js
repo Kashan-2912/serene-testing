@@ -185,7 +185,7 @@ export default function Home() {
 
 
         {/* <Section5 /> */}
-        <div className="relativ ">
+        <div className="relative">
           <div className="md:absolut flex flex-col justify-center items-center backdrop-blur pb-10  px-10 md:px-28 text-center  w-full  ">
             <p className="text-4xl lg:text-5xl font-semibold py-4 gravesendSans">
               EVERY DESIRE ON YOUR DOORSTEP
