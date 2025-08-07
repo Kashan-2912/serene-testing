@@ -202,7 +202,7 @@ export default function Home() {
 
 
         {/* <Section6 /> */}
-        <div className="text-center bg-[url('/assets/home/location/bgMap.png')] bg-cover bg-no-repeat w-full lg:px-36 md:px-20 xs:px-6 mb-20 pt-20">
+        <div className="text-center bg-[url('/assets/home/location/bgMap.png')] bg-cover bg-no-repeat w-full lg:px-36 md:px-20 xs:px-6 mb-20 pt-20 pb-20">
           <p className="sm:text-5xl text-4xl font-bold py-10 gravesendSans">
             Location
           </p>
@@ -233,7 +233,7 @@ export default function Home() {
 
         {/* <Section7 /> */}
         <div className="text-center lg:px-36 md:px-20 xs:px-6 ">
-          <p className="sm:text-5xl text-4xl font-bold py-8 gravesendSans">
+          <p className="sm:text-5xl text-4xl font-bold py-16 gravesendSans">
             ENQUIRE NOW
           </p>
           <div className="flex flex-col px-4 sm:px-0 md:flex-row gap-4">
