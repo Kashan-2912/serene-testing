@@ -52,7 +52,7 @@ const LoopingRow = ({ images, animation }) => {
                 key={i}
                 width={200}
                 height={50}
-                className="h-auto max-h-full w-full px-2 sm:px-0 p-1 sm:p-0 rounded-2xl sm:rounded-none"
+                className="h-full w-full px-2 sm:px-0 p-1 sm:p-0 rounded-2xl sm:rounded-none"
                 src={`/assets/home/desireFrames/${src}`}
                 alt="img"
                 priority
