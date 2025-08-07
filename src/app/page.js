@@ -143,7 +143,7 @@ export default function Home() {
 
 
         {/* <Section4 /> */}
-        <div className="text-center sm:pb-24  pb-0  sm:px-20 px-6">
+        <div className="text-center sm:pb-24 pb-0 sm:px-20 px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
