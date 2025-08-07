@@ -8,17 +8,17 @@ function ImgCarousel() {
   const [swipeable, setSwipeable] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
 
-  //  useEffect(() => {
-  //    const handleResize = () => {
-  //      setShowArrows(window.innerWidth > 768);
-  //      setSwipeable(window.innerWidth > 768); 
-  //    };
+   useEffect(() => {
+     const handleResize = () => {
+       setShowArrows(window.innerWidth > 768);
+       setSwipeable(window.innerWidth > 768); 
+     };
 
-  //    handleResize(); 
-  //    window.addEventListener("resize", handleResize);
+     handleResize(); 
+     window.addEventListener("resize", handleResize);
 
-  //    return () => window.removeEventListener("resize", handleResize);
-  //  }, []);
+     return () => window.removeEventListener("resize", handleResize);
+   }, []);
 
 
   return (
@@ -32,7 +32,7 @@ function ImgCarousel() {
         centerSlidePercentage={100}
         interval={4000} // Adjust the autoplay speed
         showStatus={false}
-        showArrows={true}
+        showArrows={showArrows}
         swipeable={swipeable}
       >
 
