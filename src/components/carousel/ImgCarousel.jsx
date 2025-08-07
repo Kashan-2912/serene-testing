@@ -25,7 +25,7 @@ function ImgCarousel() {
     <div className="fixed top-0 left-0 w-[100%] h-screen">
       <Carousel
         autoPlay={autoPlay}
-        className="h-[95vh] w-full"
+        className="h-screen w-full"
         showThumbs={false}
         infiniteLoop
         centerMode
@@ -38,7 +38,7 @@ function ImgCarousel() {
 
 
         {/* VIDEO #1 */}
-        <div className="relative h-[95vh]">
+        <div className="relative">
           <video
             className="h-full w-full object-cover"
             src="https://ik.imagekit.io/dueovwndo/landingVideo.mp4?updatedAt=1754382936223"
@@ -53,7 +53,7 @@ function ImgCarousel() {
 
 
         {/* IMAGE in Carousel */}
-        <div className="relative h-[95vh] ">
+        <div className="relative ">
           <img
             className="h-full w-full"
             src="/assets/carousel/carouselImg1.png"
@@ -95,7 +95,7 @@ function ImgCarousel() {
 
 
       {/* VIDEO #2 */}
-        <div className="relative h-[95vh]">
+        <div className="relative">
           <video
             className="h-full w-full object-cover"
             src="https://ik.imagekit.io/dueovwndo/landingVideo2.mp4?updatedAt=1754382936153"
