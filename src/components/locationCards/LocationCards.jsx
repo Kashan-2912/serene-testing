@@ -29,8 +29,8 @@ function LocationCards({ title, distance }) {
         alt="locationIcon"
       />
       <div className="py-2 flex-grow">
-        <p className="font-[Poppins] font-medium text-[15px] lg:text-[19px] xl:text-[20px] text-[#000000]">{title}</p>
-        <p className="font-[Poppins] font-medium text-[13px] lg:text-[16px] xl:text-[16px] text-[#000000] leading=[135%] opacity-70">{distance}</p>
+        <p className="font-[Poppins] font-medium text-[15px] lg:text-[19px] xl:text-[22px] text-[#000000]">{title}</p>
+        <p className="font-[Poppins] font-medium text-[13px] lg:text-[16px] xl:text-[17px] text-[#000000] leading=[135%] opacity-70">{distance}</p>
       </div>
     </div>
   );
