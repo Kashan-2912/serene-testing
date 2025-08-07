@@ -148,13 +148,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="my-28 lg:px-36 md:px-20 px-4"
+            className="my-20 lg:px-36 md:px-20 px-4"
           >
             <p className="text-3xl sm:text-5xl text-[#37584F] font-bold gravesendSans">
               DISCOVER SERENE HEIGHTS <br /> IN NATHIA GALI
             </p>
-            <p className="py-8 px text-[#222222] inter">
-              Serene Heights Nathia Gali, nestled near PAF’s Kalabagh Airbase,
+            <p className="py-8 text-[#222222] inter">
+              Serene Heights Nathia Gali, nestled near PAFs Kalabagh Airbase,
               offers secure, scenic living amidst alpine forests, with unobstructed
               valley views. Minutes from Nathia Gali Main Bazar, this resort-style
               retreat provides peace, modern amenities, and breathtaking sunsets,
@@ -169,15 +169,16 @@ export default function Home() {
                 transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
                 className="relative w-full"
               >
-                <iframe
-                  width="1200"
-                  height="600"
-                  src="https://www.youtube.com/embed/hgdClMWb6rE"
-                  title="YouTube Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full rounded-2xl"
-                ></iframe>
+                {/* Responsive YouTube iframe wrapper */}
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/hgdClMWb6rE"
+                    title="YouTube Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
+                </div>
               </motion.div>
             </div>
           </motion.div>
