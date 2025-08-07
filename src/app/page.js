@@ -208,13 +208,13 @@ export default function Home() {
           </p>
           <div className="grid h-full px-3 sm:px-0 lg:h-[80vh] grid-cols-1 md:grid-cols-2 gap-6 py-10">
             {/* Image section */}
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden rounded-xl">
               <img
                 src="/assets/home/location/location.png"
                 // width={"500"}
                 // height={"500"}
                 alt="location"
-                className="object-cover w-full h-full rounded-xl shadow-[0_0_6px_0_#00000040]
+                className="object-cover w-full h-full shadow-[0_0_6px_0_#00000040]
 "
               />
             </div>
