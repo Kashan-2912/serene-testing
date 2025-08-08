@@ -187,16 +187,18 @@ export default function Home() {
 
         {/* <Section5 /> */}
         <div className="relative">
-          <div className="md:absolut flex flex-col justify-center items-center backdrop-blur pb-10  px-10 md:px-28 text-center  w-full  ">
-            <p className="text-4xl lg:text-5xl font-semibold py-4 gravesendSans">
-              EVERY DESIRE ON YOUR DOORSTEP
-            </p>
-            <p className="font-medium inter">
-              Indulge in unparalleled luxury at our esteemed hotel & resort.
-              <br />
-              Experience opulent comfort, exquisite dining, and refined
-              accommodations.{" "}
-            </p>
+          <div className="md:absolute md:left-0 md:w-1/2 flex items-center justify-start">
+            <div className="backdrop-blur px-8 py-8 lg:px-16 w-full text-center md:text-left">
+              <p className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-semibold gravesendSans pb-4">
+                EVERY DESIRE ON YOUR DOORSTEP
+              </p>
+              <p className="font-medium poppins text-[#222222] opacity-70 pt-0 md:text-[12px] lg:text-[15px]">
+                Indulge in unparalleled luxury at our esteemed hotel & resort. Experience opulent comfort, exquisite
+                dining, and refined accommodations. Elevate your lifestyle with our luxurious apartments, offering modern
+                comfort and convenience. Enjoy a range of activities including archery, hiking, golf, snowboarding,
+                shooting range, helipad access, massages, alpine roller coaster, and rock climbing.
+              </p>
+            </div>
           </div>
           <LoopImages />
         </div>
