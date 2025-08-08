@@ -187,7 +187,7 @@ export default function Home() {
 
         {/* <Section5 /> */}
         <div className="relative">
-          <div className="md:absolute md:left-0 md:w-1/2 flex items-center justify-start">
+          <div className="md:absolute md:left-0 md:w-1/2 flex items-center justify-center md:h-1/2">
             <div className="backdrop-blur px-8 py-8 lg:px-16 w-full text-center md:text-left">
               <p className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-semibold gravesendSans pb-4">
                 EVERY DESIRE ON YOUR DOORSTEP
