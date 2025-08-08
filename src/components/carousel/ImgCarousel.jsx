@@ -62,10 +62,10 @@ function ImgCarousel() {
           <div className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start">
             <div className=" pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
               <div>
-                <p className="pt-6 xs:pt-4 text-2xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold gravesendSans">
+                <p className="pt-6 xs:pt-4 text-4xl lg:text-5xl xl:text-6xl font-bold gravesendSans">
                   DISCOVER LUXURY <br /> EMBRACE NATURE
                 </p>
-                <p className="py-2 xs:py-4 text-[52px] xs:text-2xl lg:text-3xl xl:text-4xl pb-10 font-regular font-helvetica">
+                <p className="py-2 xs:py-4 text-2xl lg:text-3xl xl:text-4xl pb-10 font-regular font-helvetica">
                   Serene Heights Nathia Gali <br /> Hotels & Resorts
                 </p>
               </div>
