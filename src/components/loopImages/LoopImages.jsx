@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import React, { useEffect, useState } from "react"
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 // You can keep your real file names/paths.
 // Using the same structure you shared.
@@ -10,29 +10,26 @@ const frames = [
   ["frame5.png", "frame6.png", "frame7.png", "frame8.png"],
   ["frame9.png", "frame10.png", "frame11.png", "frame12.png"],
   ["frame13.png", "frame14.png", "frame15.png", "frame16.png"],
-]
+];
 
 // Helper to detect xs screens (unchanged behavior)
 const useIsXsScreen = () => {
-  const [isXs, setIsXs] = useState(false)
+  const [isXs, setIsXs] = useState(false);
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsXs(window.innerWidth < 636)
-    }
-    checkScreenSize()
-    window.addEventListener("resize", checkScreenSize)
+      setIsXs(window.innerWidth < 636);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
     return () => {
-      window.removeEventListener("resize", checkScreenSize)
-    }
-  }, [])
-  return isXs
-}
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+  return isXs;
+};
 
-function LoopingRow({
-  images,
-  animation,
-}) {
-  const isXs = useIsXsScreen()
+function LoopingRow({ images, animation }) {
+  const isXs = useIsXsScreen();
   return (
     <div
       className={`flex w-screen overflow-hidden ${
@@ -65,15 +62,14 @@ function LoopingRow({
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 export default function LoopImages() {
   return (
     <div className="relative before:w-[450px]">
       {frames.map((frameSet, index) => {
-        const offsetWrapperClass =
-          index < 2 ? "md:pl-[50%]" : ""
+        const offsetWrapperClass = index < 2 ? "md:pl-[50%]" : "";
         return (
           <div key={index} className={offsetWrapperClass}>
             <LoopingRow
@@ -85,8 +81,8 @@ export default function LoopImages() {
               }
             />
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
