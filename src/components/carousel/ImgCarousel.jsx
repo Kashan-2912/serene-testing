@@ -80,7 +80,7 @@ function ImgCarousel() {
                 />
               </div>
 
-              <div className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md helveticaNeue font-medium tracking-[0.05em]">
+              <div className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md font-helvetica font-medium ">
                 <ul className="text-left">
                   <li>
                     • Monthly Rental Income After <br />{" "}
