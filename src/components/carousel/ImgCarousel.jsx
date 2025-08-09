@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 function ImgCarousel() {
-  const [autoPlay, setAutoPlay] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(true);
   const [swipeable, setSwipeable] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
 
@@ -46,8 +46,8 @@ function ImgCarousel() {
             preload="auto"
             muted
             loop
-            // onMouseEnter={() => setAutoPlay(false)}
-            // onMouseLeave={() => setAutoPlay(true)}
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
           />
         </div>
 
@@ -80,7 +80,7 @@ function ImgCarousel() {
                 />
               </div>
 
-              <div className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md helveticaNeue font-bold tracking-[0.05em]">
+              <div className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md helveticaNeue font-medium tracking-[0.05em]">
                 <ul className="text-left">
                   <li>
                     • Monthly Rental Income After <br />{" "}
@@ -103,8 +103,8 @@ function ImgCarousel() {
             preload="auto"
             muted
             loop
-            // onMouseEnter={() => setAutoPlay(false)}
-            // onMouseLeave={() => setAutoPlay(true)}
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
           />
         </div>
       </Carousel>

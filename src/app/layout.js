@@ -25,9 +25,9 @@ const gravesendSans = localFont({
 });
 
 const helveticaNeue = localFont({
-  src: "../../public/fonts/Helvetica-Neue LT-Std-35-Thin.otf", // Correct path if in public folder
+  src: "../../public/fonts/Helvetica-Neue-LT-Pro-65-Medium.otf", // Correct path if in public folder
   variable: "--font-helvetica-neue", // Define a CSS variable
-  weight: "500", // Adjust weight if needed
+  // weight: "500", // Adjust weight if needed
   display: "swap", // Optional: improve loading performance
 });
 
