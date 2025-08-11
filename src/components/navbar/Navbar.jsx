@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { elements } from "@/utils/constants/navElements";
 import { usePathname, useRouter } from "next/navigation";
-import ResponsiveNavbar from "../responsiveNavbar/ResponsiveNavbar"
+import ResponsiveNavbar from "../responsiveNavbar/ResponsiveNavbar";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -47,42 +47,6 @@ function Navbar() {
       setActiveElement(null);
     }
   };
-
-  // const handleScrollToSection = (section, elementId, elementKey) => {
-  //   setActiveElement(elementKey);
-  //   setShow(false);
-  //   const newPath = `/${section}#${elementId}`;
-  //   const offset = 90;
-
-  //   if (pathname === `/${section}`) {
-  //     setTimeout(() => {
-  //       const element = document.getElementById(elementId);
-  //       if (element) {
-  //         const elementPosition =
-  //           element.getBoundingClientRect().top + window.scrollY;
-  //         window.scrollTo({
-  //           top: elementPosition - offset,
-  //           behavior: "smooth",
-  //         });
-  //       }
-  //     }, 100);
-  //   } else {
-  //     router.push(`/${section}`).then(() => {
-  //       setTimeout(() => {
-  //         window.location.hash = elementId; // Set hash in URL
-  //         const element = document.getElementById(elementId);
-  //         if (element) {
-  //           const elementPosition =
-  //             element.getBoundingClientRect().top + window.scrollY;
-  //           window.scrollTo({
-  //             top: elementPosition - offset,
-  //             behavior: "smooth",
-  //           });
-  //         }
-  //       }, 500);
-  //     });
-  //   }
-  // };
 
   const handleScrollToSection = (section, elementId, elementKey) => {
     setActiveElement(elementKey);
@@ -174,9 +138,7 @@ function Navbar() {
                 />
               </button>
             </div>
-            {/* {show == true &&
-        <ResponsiveNavbar setShow={()=>setShow()}/> 
-        } */}
+
             <div
               className={`w-full items-center justify-between  order-2 lg:order-1 m bg-yellow md:flex md:w-auto ${
                 show ? "" : "hidden"
@@ -265,24 +227,24 @@ function Navbar() {
             </div>
 
             <div
-              className={`pl-0  md:flex order-1 lg:order-2 items-center gap-1 md:gap-4 ${
+              className={`pl-0 md:flex order-1 lg:order-2 items-center gap-1 md:gap-4 ${
                 show ? "" : "hidden"
               }`}
             >
               <Link href="/contact-us#location">
                 <Icon
+                  color={textColor}
                   icon="fluent:location-20-regular"
                   width="30"
                   height="30"
-                  // className={`${textColor}`}
                 />
               </Link>
-              {/* <Icon
+              <Icon
+                color={textColor}
                 icon="iconamoon:search-thin"
                 width="24"
                 height="24"
-                // className={`${textColor}`}
-              /> */}
+              />
               <Link
                 href="/contact-us#contact-us"
                 className="text-decoration-none   "
