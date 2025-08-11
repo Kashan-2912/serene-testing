@@ -9,6 +9,7 @@ import { locationElements } from "@/utils/constants/locationElements";
 import { Icon } from "@iconify-icon/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SimpleMap from "../components/map/Map";
 
 export default function Home() {
   return (
@@ -210,17 +211,12 @@ export default function Home() {
             Location
           </p>
           <div className="grid h-full px-3 sm:px-0 lg:h-[80vh] grid-cols-1 md:grid-cols-2 gap-6 py-10">
+            
             {/* Image section */}
-            <div className="relative w-full h-full overflow-hidden rounded-xl">
-              <img
-                src="/assets/home/location/location.png"
-                // width={"500"}
-                // height={"500"}
-                alt="location"
-                className="object-cover w-full h-full shadow-[0_0_6px_0_#00000040]
-"
-              />
+            <div className="relative w-full h-full overflow-hidden rounded-xl shadow-[0_0_6px_0_#00000040]">
+              <SimpleMap />
             </div>
+
             {/* Cards section */}
             <div className="h-full flex flex-col gap-4 py-2">
               {locationElements.map((loc, index) => (
