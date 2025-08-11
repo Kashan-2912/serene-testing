@@ -83,12 +83,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
       > 
        
-        <div className="flex flex-col min-h-screen w-full">
+        <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
           <Navbar />
-          <main className="flex-grow w-full">{children}</main>
+          <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
           {/* {currentPath != "floor-plans" && <Footer />} */}
           <Footer />
         </div>
@@ -120,6 +120,16 @@ export default function RootLayout({ children }) {
 
           .animate-pop {
             animation: popEffect 1.5s infinite ease-in-out;
+          }
+          
+          /* Additional overflow prevention */
+          html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+          }
+          
+          * {
+            box-sizing: border-box;
           }
              }
         `}</style>
