@@ -13,7 +13,7 @@ function Footer() {
   if (!showFooter) return null;
   return (
     <div className=" bottom-0 w-full z-40 bg-footer-gradient text-white">
-      <div className="flex flex-col md:flex-row gap-0 md:gap-10  items-start md:items-center px-8 sm:px-32 py-8">
+      <div className="flex flex-col md:flex-row gap-0 md:gap-10  items-start md:items-center px-8 sm:px-20 py-8">
         <img
           src="/assets/footer/finalLogo.png"
           alt="logo img"
