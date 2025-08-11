@@ -64,7 +64,13 @@ function ImgCarousel() {
             onMouseLeave={() => setAutoPlay(true)}
           />
 
-          <div className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start">
+          <motion.div 
+            className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start"
+            key={`gradient-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={currentSlide === 0 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             <div className="pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
               <motion.div
                 key={`text-${currentSlide}`}
@@ -114,7 +120,7 @@ function ImgCarousel() {
                 </ul>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* IMAGE in Carousel */}
@@ -125,7 +131,13 @@ function ImgCarousel() {
             alt="image"
           />
 
-          <div className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start">
+          <motion.div 
+            className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start"
+            key={`gradient-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={currentSlide === 1 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+          >
             <div className="pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
               <motion.div
                 key={`text-${currentSlide}`}
@@ -175,7 +187,7 @@ function ImgCarousel() {
                 </ul>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* VIDEO #2 */}
@@ -191,7 +203,13 @@ function ImgCarousel() {
             onMouseLeave={() => setAutoPlay(true)}
           />
 
-          <div className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start">
+          <motion.div 
+            className="absolute text-white bg-gradient-to-tr from-[#000]/80 to-[#666]/10 text-left px-4 md:px-24 inset-0 w-full flex flex-col justify-center items-center md:items-start"
+            key={`gradient-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={currentSlide === 2 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+          >
             <div className="pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
               <motion.div
                 key={`text-${currentSlide}`}
@@ -241,7 +259,7 @@ function ImgCarousel() {
                 </ul>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Carousel>
     </div>
