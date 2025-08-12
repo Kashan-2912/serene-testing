@@ -1,4 +1,4 @@
-import ImageGrid from "@/components/imageGrid/ImageGrid";
+import ImageGrid from "@/components/about/imageGrid/ImageGrid";
 import {
   bottomImages,
   imageGroups,
@@ -10,7 +10,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="text-center px-6 md:px-20 lg:px-36 h-full" id="about">
+    <div className="text-center px-6 md:px-16 lg:px-36 h-full" id="about">
       <h1 className="sm:text-5xl text-4xl font-bold text-[#37584F]  gravesendSans ">
         {" "}
         About Us
@@ -28,7 +28,7 @@ function page() {
         Barki Road in Lahore.
       </p>
 
-      <div className="w-[100%] ">
+      <div className="w-[100%]">
         <div className="flex flex-col md:flex-row gap-4 w-full">
           <div className="w-full md:w-[80%]">
             {imageGroups.map((group, index) => (
@@ -41,7 +41,7 @@ function page() {
               alt="Side Image"
               width={150}
               height={300}
-              className="w-full min-h-[800px] md:min-h-[385px] xl:min-h-[578px] 2xl:min-h-[640px]"
+              className="w-full min-h-[800px] md:min-h-[385px] xl:min-h-[578px] 2xl:min-h-[640px] object-cover rounded-3xl"
               priority
             />
           </div>
