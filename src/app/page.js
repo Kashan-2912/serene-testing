@@ -245,38 +245,35 @@ export default function Home() {
                 Any question or remarks? Just <br /> write us a message!
               </p>
               <div className="flex flex-col gap-4 text-[#222222] font-medium">
-                <div className="flex items-center gap-3">
+                <div className="flex text-[#37584F] items-center gap-3">
                   <Icon
                     icon="mdi:phone-classic"
                     width="24"
                     height="24"
-                    color="#37584F"
                   />
-                  <p className="text-[14px] md:text-[16px] lg:text-[18px]">
+                  <p className="text-[14px] text-[#222222] md:text-[16px] lg:text-[18px]">
                     042-111-111-744
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex text-[#37584F] items-center gap-3">
                   <Icon
                     icon="ic:baseline-local-phone"
                     width="24"
                     height="24"
-                    color="#37584F"
                   />
-                  <p className="text-[14px] md:text-[16px] lg:text-[18px]">
+                  <p className="text-[14px] text-[#222222] md:text-[16px] lg:text-[18px]">
                     +92 300 8497999
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex text-[#37584F] items-center gap-3">
                   <Icon
                     icon="ic:baseline-mail"
                     width="24"
                     height="24"
-                    color="#37584F"
                   />
-                  <p className="text-[14px] md:text-[16px] lg:text-[18px] break-all">
+                  <p className="text-[14px] text-[#222222] md:text-[16px] lg:text-[18px] break-all">
                     info@sereneheightsnathiagali.com
                   </p>
                 </div>
