@@ -126,25 +126,37 @@ function page() {
         </div>
       </div>
 
-      <div className="sm:py-26 py-20  flex flex-col md:flex-row gap-12 justify-center sm:justify-between items-center ">
-        <div className="relative w-full md:w-[40%]">
-          <img
+      <div className="sm:py-26 py-20 flex flex-col md:flex-row gap-12 justify-center sm:justify-between items-center">
+        {/* Image */}
+        <div className="relative w-full md:w-[40%] order-2 md:order-1">
+          <Image
             src="/assets/about/opportunity/opr1.png"
-            className="w-full h-[500px] 2xl:h-[500px]  rounded-2xl mb-3"
             alt="img"
+            width={1000}
+            height={500}
+            className="w-full h-[500px] 2xl:h-[500px] rounded-2xl mb-3 object-cover"
+            priority
           />
-          <img
+
+          <Image
             src="/assets/about/opportunity/oprFrame1.png"
             alt="img"
-            className="absolute hidden md:block top-[5%] md:top-[8%] right-[-6%]  w-[35%] max-w-[180px] md:max-w-[220px]"
+            width={220}
+            height={220}
+            className="absolute hidden md:block top-[5%] md:top-[8%] right-[-6%] w-[35%] max-w-[180px] md:max-w-[220px]"
           />
-          <img
+
+          <Image
             src="/assets/about/opportunity/oprFrame2.png"
             alt="img"
+            width={220}
+            height={220}
             className="absolute hidden md:block bottom-[5%] md:bottom-[10%] right-[-18%] w-[35%] max-w-[180px] md:max-w-[220px]"
           />
         </div>
-        <div className=" text-left w-full md:w-[60%] ">
+
+        {/* Text */}
+        <div className="text-left w-full md:w-[60%] order-1 md:order-2">
           <div className="flex items-center gap-2">
             <Icon
               icon="fa6-solid:lightbulb"
@@ -152,7 +164,7 @@ function page() {
               width="34"
               height="32"
             />
-            <p className="sm:text-4xl text-3xl font-bold py-3 text-[#37584F] gravesendSans ">
+            <p className="sm:text-4xl text-3xl font-bold py-3 text-[#37584F] gravesendSans">
               Opportunity For You
             </p>
           </div>
@@ -160,12 +172,13 @@ function page() {
             Furthermore, our projects present a{" "}
             <b>unique opportunity to invest in mountain real estate,</b>{" "}
             promising significant{" "}
-            <b>capital appreciation and recurring monthly dividends.</b> We aim
+            <b>capital appreciation and recurring monthly dividends.</b> We aim
             to nurture and spoil you by bringing you closer to nature and purity
             with zero compromise in comfort and quality of life.
           </p>
         </div>
       </div>
+
     </div>
   );
 }
