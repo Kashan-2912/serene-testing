@@ -13,20 +13,20 @@ function Contactus() {
         <h1 className=" my-2 text-3xl font-semibold text-[#37584F] gravesendSans">
           Nearby serene heights
         </h1>
-        <p className="text-[#37584F] inter">
+        <p className="text-[#475467] inter">
           Our friendly team is always here to chat
         </p>
         <MultiCarousel />
       </div>
 
       <div className="relative my-10  " id="location">
-        <div className="relative flex flex-wrap items-center justify-between sm:py-36 py-28 px-16 lg:px-20 xl:px-40 bg-[#F3F2ED]">
+        <div className="relative flex flex-wrap gap-4 items-center justify-between sm:py-36 py-28 px-16 lg:px-20 xl:px-40 bg-[#F3F2ED]">
           <div className="text-[#37584F]">
             <p className="font-semibold inter">Location</p>
             <p className="uppercase text-3xl font-semibold my-2 gravesendSans">
               Our Locations
             </p>
-            <p className="text-sm inter">
+            <p className="text-sm inter text-[#475467]">
               You can visit us at offices at given addresses.
             </p>
           </div>
@@ -39,8 +39,8 @@ function Contactus() {
                 className="bg-[#37584F] text-white p-1 rounded-md"
               />
               <div>
-                <p className="font-medium mt-2">Project</p>
-                <p className="text-[#37584F] text-sm">
+                <p className="font-semibold mt-2 text-[#101828]">Project</p>
+                <p className="text-sm text-[#475467]">
                   Serene Heights. 1.5KM, Kala Bagh Air Base Road, Nathiagali
                 </p>
               </div>
@@ -53,22 +53,20 @@ function Contactus() {
                 className="bg-[#37584F] text-white p-1 rounded-md"
               />
               <div>
-                <p className="font-medium mt-2">Head Office</p>
-                <p className="text-[#37584F] text-sm">
+                <p className="font-semibold mt-2 text-[#101828]">Head Office</p>
+                <p className="text-sm text-[#475467]">
                   DM Consortium. H. No. 71 C3 Gulberg III Park View Lane, Lahore
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative -top-20 px-16 lg:px-20 xl:px-40">
-          {/* <SimpleMap /> */}
-          <img
-            src="/assets/contactUs/location.png"
-            className="w-full"
-            alt="locationImg"
-          />
+        {/* <div className="relative -top-20 px-16 lg:px-20 xl:px-40"> */}
+        {/* <SimpleMap /> */}
+        <div className="relative w-full md:h-full h-[500px] overflow-hidden rounded-xl shadow-[0_0_6px_0_#00000040]">
+          <SimpleMap />
         </div>
+        {/* </div> */}
       </div>
 
       <div className="h-[12vh] " id="contact-us">
