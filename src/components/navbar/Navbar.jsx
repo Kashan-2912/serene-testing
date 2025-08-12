@@ -166,7 +166,7 @@ function Navbar() {
                             : "scale-100"
                         }  md:p-0 `}
                       >
-                        {element.name}
+                        <div className="lg:text-[14px] md:text-[10px]">{element.name}</div>
                       </button>
                     </Link>
                     {/* Dropdown Menu */}
@@ -249,7 +249,7 @@ function Navbar() {
                 href="/contact-us#contact-us"
                 className="text-decoration-none   "
               >
-                <button className="hidden items-center gap-2 rounded-lg bg-[#37584F] hover:bg-transparent hover:border hover:border-[#37584F] px-5 md:px-12 py-4 text-sm text-white hover:text-[#37584F] hover:shadow-none shadow-lg sm:flex">
+                <button className="hidden items-center gap-2 rounded-lg bg-[#37584F] hover:bg-transparent hover:border hover:border-[#37584F] px-5 md:px-6 py-3 text-sm text-white hover:text-[#37584F] hover:shadow-none shadow-lg sm:flex">
                   Enquire
                 </button>
               </Link>
