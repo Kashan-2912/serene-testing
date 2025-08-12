@@ -15,6 +15,15 @@ function Navbar() {
   const dropdownRef = useRef(null);
   const router = useRouter();
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => setIsDesktop(window.innerWidth >= 768); // md breakpoint
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   console.log("Active element", activeElement);
   const handleScroll = () => {
     setScrolling(window.scrollY > 0);
@@ -150,8 +159,14 @@ function Navbar() {
                   <li
                     key={element.key}
                     className="relative group h-full cursor-pointer flex items-center"
-                    onMouseEnter={() => handleMouseEnter(element.key)}
-                    onMouseLeave={handleMouseLeave}
+                    // onMouseEnter={() => handleMouseEnter(element.key)}
+                    // onMouseLeave={handleMouseLeave}
+                    onMouseEnter={
+                      isDesktop
+                        ? () => handleMouseEnter(element.key)
+                        : undefined
+                    }
+                    onMouseLeave={isDesktop ? handleMouseLeave : undefined}
                   >
                     <Link
                       href={`/${element.id}`}
@@ -166,7 +181,9 @@ function Navbar() {
                             : "scale-100"
                         }  md:p-0 `}
                       >
-                        <div className="lg:text-[14px] md:text-[10px]">{element.name}</div>
+                        <div className="lg:text-[14px] md:text-[10px]">
+                          {element.name}
+                        </div>
                       </button>
                     </Link>
                   </li>
@@ -205,50 +222,51 @@ function Navbar() {
           </div>
 
           {/* Full Width Dropdown Menu */}
-          {activeElement && elements.find(el => el.key === activeElement)?.submenu && (
-            <div
-              className="absolute border-t border-[#37584F] top-full left-0 w-full bg-white/90 backdrop-blur-sm text-white drop-shadow-xl z-40"
-              ref={dropdownRef}
-              onMouseEnter={() => setActiveElement(activeElement)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="mx-auto max-w-screen-2xl flex justify-start gap-8 px-16">
-                {elements.find(el => el.key === activeElement)?.submenu.map((section, index) => (
-                  <div
-                    key={index}
-                    className={`w-full flex flex-col py-8 ${
-                      index > 0
-                        ? "border-l border-[#37584F] pl-8 "
-                        : "pl-8"
-                    } `}
-                  >
-                    {/* Section Title */}
-                    <div className="text-lg font-bold text-[#c1c0c0]">
-                      {section.sectionTitle}
-                    </div>
-                    {/* Submenu Items */}
-                    <div className={`flex flex-col text-[#37584F]`}>
-                      {section.items.map((subItem, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          href={`/${subItem.section}#${subItem.id}`}
-                          onClick={() =>
-                            handleScrollToSection(
-                              subItem.section,
-                              subItem.id
-                            )
-                          }
-                          className={`block py-2 hover:underline hover:underline-offset-[6px] hover:text-lg md:bg-transparent w-[150px]`}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+          {isDesktop && activeElement &&
+            elements.find((el) => el.key === activeElement)?.submenu && (
+              <div
+                className="absolute border-t border-[#37584F] top-full left-0 w-full bg-white/90 backdrop-blur-sm text-white drop-shadow-xl z-40"
+                ref={dropdownRef}
+                onMouseEnter={() => setActiveElement(activeElement)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="mx-auto max-w-screen-2xl flex justify-start gap-8 px-16">
+                  {elements
+                    .find((el) => el.key === activeElement)
+                    ?.submenu.map((section, index) => (
+                      <div
+                        key={index}
+                        className={`w-full flex flex-col py-8 ${
+                          index > 0 ? "border-l border-[#37584F] pl-8 " : "pl-8"
+                        } `}
+                      >
+                        {/* Section Title */}
+                        <div className="text-lg font-bold text-[#c1c0c0]">
+                          {section.sectionTitle}
+                        </div>
+                        {/* Submenu Items */}
+                        <div className={`flex flex-col text-[#37584F]`}>
+                          {section.items.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={`/${subItem.section}#${subItem.id}`}
+                              onClick={() =>
+                                handleScrollToSection(
+                                  subItem.section,
+                                  subItem.id
+                                )
+                              }
+                              className={`block py-2 hover:underline hover:underline-offset-[6px] hover:text-lg md:bg-transparent w-[150px]`}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
         </nav>
       )}
     </>
