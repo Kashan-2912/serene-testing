@@ -1,3 +1,5 @@
+"use client";
+
 import ImageGrid from "@/components/about/imageGrid/ImageGrid";
 import {
   bottomImages,
@@ -5,6 +7,7 @@ import {
   sideImage,
 } from "@/utils/constants/aboutElements";
 import { Icon } from "@iconify-icon/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -74,30 +77,51 @@ function page() {
             designed to epitomize comfort and opulence.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-3 justify-center items-center w-full md:w-[40%]">
+
+        <div className="grid grid-cols-2 gap-3">
           <div>
-            <img
-              src="/assets/about/obj/objImg1.png"
-              className="h-[250] 2xl:h-[350px] w-full rounded-xl mb-3"
-              alt="img"
-            />
-            <img
-              src="/assets/about/obj/objImg2.png"
-              className="h-[170px] 2xl:h-[200] w-full rounded-xl"
-              alt="img"
-            />
+            <div className="mb-3">
+              <Image
+                src="/assets/about/obj/objImg1.png"
+                alt="img"
+                width={170}
+                height={220}
+                className="rounded-[10px]"
+                priority
+              />
+            </div>
+            <div>
+              <Image
+                src="/assets/about/obj/objImg2.png"
+                alt="img"
+                width={170}
+                height={140}
+                className="rounded-[10px]"
+                priority
+              />
+            </div>
           </div>
-          <div>
-            <img
-              src="/assets/about/obj/objImg3.png"
-              className="h-[170px] 2xl:h-[200] w-full rounded-xl mb-3"
-              alt="img"
-            />
-            <img
-              src="/assets/about/obj/objImg4.png"
-              className="h-[250px] 2xl:h-[350px] w-full rounded-xl "
-              alt="img"
-            />
+          <div className="flex flex-col">
+            <div className="mb-3">
+              <Image
+                src="/assets/about/obj/objImg3.png"
+                alt="img"
+                width={170}
+                height={140}
+                className="rounded-[10px]"
+                priority
+              />
+            </div>
+            <div className="flex-1">
+              <Image
+                src="/assets/about/obj/objImg4.png"
+                alt="img"
+                width={170}
+                height={220}
+                className="rounded-[10px] h-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
