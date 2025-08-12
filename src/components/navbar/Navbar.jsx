@@ -169,58 +169,6 @@ function Navbar() {
                         <div className="lg:text-[14px] md:text-[10px]">{element.name}</div>
                       </button>
                     </Link>
-                    {/* Dropdown Menu */}
-                    {element.submenu && activeElement === element.key && (
-                      <div
-                        className="absolute border-t border-[#37584F] top-full  w-ful bg-white/90 backdrop-blur-sm text-white drop-shadow-xl"
-                        ref={dropdownRef}
-                        onMouseEnter={() => setActiveElement(activeElement)}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        <div className="mx-aut max-w-screen-2 flex justify-center gap-8 px-8 py-">
-                          {element.submenu.map((section, index) => (
-                            // elements
-                            //   .find((el) => el.key === activeElement)
-                            //   ?.submenu.map((section, index) => (
-                            // elements.map(
-                            //   (elem) =>
-                            //   console.log(elem.id, "checking the elements")
-                            // ),
-                            <div
-                              key={index}
-                              className={`w-fu flex flex-col py-8 ${
-                                index === 1
-                                  ? "border-l border-[#37584F] pl-8 "
-                                  : ""
-                              } `}
-                            >
-                              {/* Section Title */}
-                              <div className="text-lg font-bold text-[#c1c0c0]">
-                                {section.sectionTitle}
-                              </div>
-                              {/* Submenu Items */}
-                              <div className={`flex flex-col text-[#37584F]`}>
-                                {section.items.map((subItem, subIndex) => (
-                                  <Link
-                                    key={subIndex}
-                                    href={`/${subItem.section}#${subItem.id}`}
-                                    onClick={() =>
-                                      handleScrollToSection(
-                                        subItem.section,
-                                        subItem.id
-                                      )
-                                    }
-                                    className={`block py-2 hover:underline hover:underline-offset-[6px] hover:text-lg md:bg-transparent w-[150px]`}
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </li>
                 ))}
               </ul>
@@ -255,6 +203,52 @@ function Navbar() {
               </Link>
             </div>
           </div>
+
+          {/* Full Width Dropdown Menu */}
+          {activeElement && elements.find(el => el.key === activeElement)?.submenu && (
+            <div
+              className="absolute border-t border-[#37584F] top-full left-0 w-full bg-white/90 backdrop-blur-sm text-white drop-shadow-xl z-40"
+              ref={dropdownRef}
+              onMouseEnter={() => setActiveElement(activeElement)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="mx-auto max-w-screen-2xl flex justify-start gap-8 px-16">
+                {elements.find(el => el.key === activeElement)?.submenu.map((section, index) => (
+                  <div
+                    key={index}
+                    className={`w-full flex flex-col py-8 ${
+                      index > 0
+                        ? "border-l border-[#37584F] pl-8 "
+                        : "pl-8"
+                    } `}
+                  >
+                    {/* Section Title */}
+                    <div className="text-lg font-bold text-[#c1c0c0]">
+                      {section.sectionTitle}
+                    </div>
+                    {/* Submenu Items */}
+                    <div className={`flex flex-col text-[#37584F]`}>
+                      {section.items.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={`/${subItem.section}#${subItem.id}`}
+                          onClick={() =>
+                            handleScrollToSection(
+                              subItem.section,
+                              subItem.id
+                            )
+                          }
+                          className={`block py-2 hover:underline hover:underline-offset-[6px] hover:text-lg md:bg-transparent w-[150px]`}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </nav>
       )}
     </>
