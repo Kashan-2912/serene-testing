@@ -61,12 +61,13 @@ function Contactus() {
             </div>
           </div>
         </div>
-        {/* <div className="relative -top-20 px-16 lg:px-20 xl:px-40"> */}
-        {/* <SimpleMap /> */}
-        <div className="relative w-full md:h-full h-[500px] overflow-hidden rounded-xl shadow-[0_0_6px_0_#00000040]">
-          <SimpleMap />
+
+        <div className="relative -top-20 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-40">
+          <div className="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] w-full overflow-hidden rounded-xl shadow-lg">
+            <SimpleMap />
+          </div>
         </div>
-        {/* </div> */}
+        
       </div>
 
       <div className="h-[12vh] " id="contact-us">

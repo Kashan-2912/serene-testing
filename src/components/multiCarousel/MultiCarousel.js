@@ -76,16 +76,16 @@ function MultiCarousel() {
       {/* Carousel for md and above */}
       <div className="hidden md:block relative w-full mx-auto px-16">
         <button
-  onClick={handlePrevious}
-  className="absolute left-5 top-1/2 -translate-y-1/2 bg-[#FEFEFB] hover:bg-[#37584F] w-9 h-9 rounded-full flex items-center justify-center border cursor-pointer z-10 transition-all duration-300 group"
-  aria-label="Previous"
-  style={{ transform: "translateY(-50%)" }}
->
-  <Icon 
-    icon="akar-icons:chevron-left" 
-    className="text-black group-hover:text-white" 
-  />
-</button>
+          onClick={handlePrevious}
+          className="absolute left-5 top-1/2 -translate-y-1/2 bg-[#FEFEFB] hover:bg-[#37584F] w-9 h-9 rounded-full flex items-center justify-center border cursor-pointer z-10 transition-all duration-300 group"
+          aria-label="Previous"
+          style={{ transform: "translateY(-50%)" }}
+        >
+          <Icon
+            icon="akar-icons:chevron-left"
+            className="text-black group-hover:text-white"
+          />
+        </button>
 
 
         <button
