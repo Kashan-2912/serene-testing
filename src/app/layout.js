@@ -105,8 +105,14 @@ export default function RootLayout({ children }) {
       >
 
 
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKXXQVZC"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PKXXQVZC"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
 
 
         <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
