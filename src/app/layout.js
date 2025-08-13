@@ -16,7 +16,6 @@ import { headers } from "next/headers";
 import { Icon } from "@iconify-icon/react";
 import ConIcon from "@/components/conIcon/ConIcon";
 import { Analytics } from "@vercel/analytics/next"
-import Head from "next/head";
 import Script from "next/script";
 
 const gravesendSans = localFont({
@@ -88,20 +87,17 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google Tag Manager */}
         <Script
-          id="gtm-inline-script"
-          dangerouslySetInnerHTML={{
-            __html: `
-          (function(w,d,s,l,i){w[l]=w[l]||[];
+          id="gtm-script" strategy="afterInteractive">{
+            `(function(w,d,s,l,i){w[l]=w[l]||[];
           w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
           var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
           j.async=true;
           j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
           f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MQNQ2SZ6');
-          `,
-          }}
-        />
+        })(window,document,'script','dataLayer','GTM-MQNQ2SZ6');`
+          }
+        </Script>
         {/* End Google Tag Manager */}
       </head>
 
