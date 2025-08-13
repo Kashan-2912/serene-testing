@@ -47,7 +47,7 @@ function Page() {
           Everything you need to know about Serene Heights
         </p>
 
-        <div className="sm:w-[60vw] w-auto mx-auto inter mb-10">
+        <div className="sm:w-[60vw] w-auto mx-auto inter mt-10 mb-10">
           {uniqueServicesElements.map((elemnt, index) => (
             <UniqueServicesCard
               body={elemnt.body}
