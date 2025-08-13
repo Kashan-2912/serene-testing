@@ -17,6 +17,8 @@ import { headers } from "next/headers";
 import { Icon } from "@iconify-icon/react";
 import ConIcon from "@/components/conIcon/ConIcon";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
+
 
 const gravesendSans = localFont({
   src: "../../public/fonts/gravesend-sans-medium.ttf", // Correct path if in public folder
@@ -83,18 +85,32 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LH33R5NMZE"
+        />
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LH33R5NMZE');
+        `}
+        </Script>
 
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
-      >
+        </head>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
+          >
 
-        <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
-          <Navbar />
-          <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
-          {/* {currentPath != "floor-plans" && <Footer />} */}
-          <Footer />
-        </div>
-        {/* <a
+            <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
+              <Navbar />
+              <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
+              {/* {currentPath != "floor-plans" && <Footer />} */}
+              <Footer />
+            </div>
+            {/* <a
           href="https://wa.me/+923214979447"
           target="_blank"
           rel="noopener noreferrer"
@@ -102,14 +118,14 @@ export default function RootLayout({ children }) {
         >
           <Icon icon="logos:whatsapp-icon" width="48" height="48" />
         </a> */}
-        <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-50 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
-          <ConIcon
-            bgColor={"bg-black/40 hover:bg-white/60"}
-            direction={"column"}
-            padding={"p-3"}
-          />
-        </div>
-        <style>{`
+            <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-50 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
+              <ConIcon
+                bgColor={"bg-black/40 hover:bg-white/60"}
+                direction={"column"}
+                padding={"p-3"}
+              />
+            </div>
+            <style>{`
           @keyframes popEffect {
             0%,
             100% {
@@ -135,8 +151,8 @@ export default function RootLayout({ children }) {
           }
              }
         `}</style>
-        <Analytics />
-      </body>
-    </html>
-  );
+            <Analytics />
+          </body>
+        </html>
+        );
 }
