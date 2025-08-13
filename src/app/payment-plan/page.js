@@ -5,7 +5,7 @@ import { paymentCardsElements } from "@/utils/constants/paymentCardElements";
 import { uniqueServicesElements } from "@/utils/constants/uniqueServicesElement";
 import React, { useState } from "react";
 
-function page() {
+function Page() {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   const toggleExpand = (index) => {
@@ -21,7 +21,7 @@ function page() {
         {" "}
         PAYMENT PLAN{" "}
       </h1>
-      <div className=" flex flex-wrap justify-center items-center ">
+      <div className="flex flex-wrap justify-center items-center">
         {paymentCardsElements.map((element, index) => (
           <div key={element.keys} className="w-full md:w-[33%] ">
             <PaymentCards
@@ -61,4 +61,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
