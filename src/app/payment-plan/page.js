@@ -8,6 +8,8 @@ import React, { useState } from "react";
 function Page() {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
+  const totalServices = uniqueServicesElements.length;
+
   const toggleExpand = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
@@ -41,11 +43,11 @@ function Page() {
         <p className="sm:text-4xl text-3xl font-bold pt-20 text-[#37584F] gravesendSans ">
           OUR UNIQUE SERVICED <br /> APARTMENT MODEL
         </p>
-        <p className="py-2 text-sm pb-8 inter">
+        <p className="py-2 text-sm pb-8 inter text-[#475467]">
           Everything you need to know about Serene Heights
         </p>
 
-        <div className="sm:w-[60vw] w-auto mx-auto inter">
+        <div className="sm:w-[60vw] w-auto mx-auto inter mb-10">
           {uniqueServicesElements.map((elemnt, index) => (
             <UniqueServicesCard
               body={elemnt.body}
@@ -53,6 +55,8 @@ function Page() {
               key={index}
               isExpanded={expandedIndex === index}
               onClick={() => toggleExpand(index)}
+              totalServices={totalServices}
+              index={index}
             />
           ))}
         </div>
