@@ -1,3 +1,4 @@
+
 import {
   Chivo,
   Geist,
@@ -15,8 +16,7 @@ import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { Icon } from "@iconify-icon/react";
 import ConIcon from "@/components/conIcon/ConIcon";
-import { Analytics } from "@vercel/analytics/next"
-import Script from "next/script";
+import {Analytics} from "@vercel/analytics/next"
 
 const gravesendSans = localFont({
   src: "../../public/fonts/gravesend-sans-medium.ttf", // Correct path if in public folder
@@ -83,11 +83,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
-      >
-
+      > 
+       
         <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
           <Navbar />
           <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
@@ -135,7 +134,7 @@ export default function RootLayout({ children }) {
           }
              }
         `}</style>
-        <Analytics />
+         <Analytics />
       </body>
     </html>
   );
