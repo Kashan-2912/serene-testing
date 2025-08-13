@@ -225,7 +225,7 @@ function Progress() {
               <iframe
                 src={item.video}
                 title={item.label}
-                className="rounded-lg my-7 xl:h-[500px] w-full opacity-0 transition-opacity duration-700 ease-in-out"
+                className="rounded-lg my-7 w-full xl:h-[500px] aspect-video opacity-0 transition-opacity duration-700 ease-in-out"
                 style={{
                   opacity: activeId === item.id ? 1 : 0.3,
                 }}
