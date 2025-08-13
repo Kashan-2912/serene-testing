@@ -9,7 +9,7 @@ function FeaturesCards() {
           <div
             key={index}
             className={`feature-card min-h-full  rounded-md w-full  p-6 flex flex-col justify-center items-center text-center cursor-pointer 
-          shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition-all duration-300 
+          shadow-[0_0_4px_0_#00000040] transition-all duration-300 
           hover:scale-105 hover:shadow-[0px_4px_15px_rgba(55,88,79,0.8)]`}
             style={{
               width: data.width,
@@ -33,7 +33,7 @@ function FeaturesCards() {
           <div
             key={index}
             className={`feature-card min-h-full  rounded-md w-full  p-6 flex flex-col justify-center items-center text-center cursor-pointer 
-          shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition-all duration-300 
+          shadow-[0_0_4px_0_#00000040] transition-all duration-300 
           hover:scale-105 hover:shadow-[0px_4px_15px_rgba(55,88,79,0.8)]`}
             style={{
               width: data.width,
@@ -57,7 +57,7 @@ function FeaturesCards() {
           <div
             key={index}
             className={`feature-card min-h-full  rounded-md w-full  p-6 flex flex-col justify-center items-center text-center cursor-pointer 
-          shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition-all duration-300 
+          shadow-[0_0_4px_0_#00000040] transition-all duration-300 
           hover:scale-105 hover:shadow-[0px_4px_15px_rgba(55,88,79,0.8)]`}
             style={{
               width: data.width,
@@ -81,7 +81,7 @@ function FeaturesCards() {
           <div
             key={index}
             className={`feature-card min-h-full  rounded-md w-full  p-6 flex flex-col justify-center items-center text-center cursor-pointer 
-          shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition-all duration-300 
+          shadow-[0_0_4px_0_#00000040] transition-all duration-300 
           hover:scale-105 hover:shadow-[0px_4px_15px_rgba(55,88,79,0.8)]`}
             style={{
               width: data.width,
