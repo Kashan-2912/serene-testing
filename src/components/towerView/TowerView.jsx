@@ -222,13 +222,13 @@ function TowerView() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center  ">
+    <div className="relative flex overflow-hidden justify-center items-center">
       <div className="relative flex justify-end w-full">
         {otherView ? (
           <img
             src="/assets/carousel/carouselImg1.png"
             alt="Building"
-            className="floor-plan-img w-screen max-h-[100vh] object-cover md:object-fill"
+            className="floor-plan-img w-screen max-h-[100%] object-cover md:object-fill"
             // style={{
             //   height: `calc(100vh - ${navbarHeight}px)`,
             // }}
@@ -238,7 +238,7 @@ function TowerView() {
             <img
               src="/assets/animatedImg/SR_33 - Photo 1.png"
               alt="Building"
-              className="floor-plan-img  w-screen h-full max-h-[100vh] object-cover md:object-fill"
+              className="floor-plan-img  w-screen h-full max-h-[100%] object-cover md:object-fill"
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
@@ -247,7 +247,7 @@ function TowerView() {
             <img
               src="/assets/animatedImg/SR_31 - Photo 1.png"
               alt="Building"
-              className="floor-plan-img  w-screen max-h-[100vh] object-cover md:object-fill "
+              className="floor-plan-img  w-screen max-h-[100%] object-cover md:object-fill "
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
@@ -257,7 +257,7 @@ function TowerView() {
           <img
             src="/assets/animatedImg/SR_29 - Photo 1.png"
             alt="Building"
-            className="floor-plan-img  w-screen max-h-[100vh] object-cover md:object-fill"
+            className="floor-plan-img  w-screen max-h-[100%] object-cover md:object-fill"
             // style={{
             //   height: `calc(100vh - ${navbarHeight}px)`,
             // }}
