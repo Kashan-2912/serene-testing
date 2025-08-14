@@ -265,7 +265,7 @@ function TowerView() {
         )}
 
         {!otherView && (
-          <div className="absolute md:top-16 z-10 sm:top-16  top-[8rem] sm:right-0 lg:right-[18rem] right-3 md:right-[10rem] flex gap-2">
+          <div className="absolute z-10 sm:top-16 top-[8rem] sm:right-0 md:right-[3rem] right-3 flex gap-2">
             <div className="">
               {snow ? (
                 <img
