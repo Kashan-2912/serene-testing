@@ -368,11 +368,11 @@ function TowerView() {
         )}
         {/* <--------left side----------->  */}
         <div className="flex absolute left-[0rem] w-[100%] md:w-[50%] sm:w-[50%] top-0 h-full items-start md:items-start flex-col sm:justify-between justify-normal md:left-10">
-          <div className="px-5 sm:px-0 mt-10 sm:mt-0 flex md:gap-3 gap-1 flex-col justify-center md:py-3 py-0 ">
+          <div className="px-5 sm:px-0 mt-10 sm:mt-0 flex md:gap-3 gap-2 flex-col justify-center md:py-3 py-0 ">
             <img
               src="/assets/logo/logo.png"
               alt="logo"
-              className=" h-[80px] w-[80px] sm:w-full sm:h-[100px] md:h-[150px]"
+              className="h-[80px] w-[80px] mb-1 sm:w-full sm:h-[100px] md:h-[150px]"
             />
             <button
               className="cursor-pointer border text-xs sm:text-base flex items-center gap-2 md:gap-1 border-white rounded-lg text-white py-2 px-2 sm:px-4"
@@ -393,12 +393,9 @@ function TowerView() {
             <img
               src="/assets/carousel/dm.png"
               alt="not found"
-              className="md:h-[150px] h-[80px] pl-1 sm:pl-16 md:pl-0"
+              className="md:h-[150px] h-[80px] mt-5 pl-1 sm:pl-16 md:pl-0"
             />
-          </div>
-          {/* </div> */}
-
-          
+          </div>   
         </div>
 
         {show && (
