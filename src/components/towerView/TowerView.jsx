@@ -1,196 +1,3 @@
-// "use client";
-// import { Icon } from "@iconify-icon/react";
-// import React, { useEffect, useState } from "react";
-// import { useRouter } from "next/navigation";
-// const floorsFront = [
-//   { id: 1, name: "Ground Floor", apartments: 10, top: "86%", rotate: "-1deg" },
-//   { id: 2, name: "Floor 1", apartments: 10, top: "75%", rotate: "-3deg" },
-//   { id: 3, name: "Floor 2", apartments: 10, top: "65%", rotate: "-6deg" },
-//   { id: 4, name: "Floor 3", apartments: 10, top: "56%", rotate: "-8deg" },
-//   { id: 5, name: "Floor 4", apartments: 10, top: "47%", rotate: "-10deg" },
-//   { id: 6, name: "Floor 5", apartments: 10, top: "38%", rotate: "-13deg" },
-//   { id: 7, name: "Floor 6", apartments: 10, top: "29%", rotate: "-14deg" },
-//   { id: 8, name: "Floor 7", apartments: 10, top: "20%", rotate: "-14deg" },
-//   { id: 9, name: "Floor 8", apartments: 10, top: "10%", rotate: "-15deg" },
-// ];
-
-// const floorsSide = [
-//   { id: 1, name: "Ground Floor", apartments: 10, top: "86%", rotate: "-1deg" },
-//   { id: 2, name: "Floor 1", apartments: 10, top: "75%", rotate: "5deg" },
-//   { id: 3, name: "Floor 2", apartments: 10, top: "63%", rotate: "18deg" },
-//   { id: 4, name: "Floor 3", apartments: 10, top: "53%", rotate: "22deg" },
-//   { id: 5, name: "Floor 4", apartments: 10, top: "41%", rotate: "28deg" },
-//   { id: 6, name: "Floor 5", apartments: 10, top: "30%", rotate: "32deg" },
-//   { id: 7, name: "Floor 6", apartments: 10, top: "20%", rotate: "34deg" },
-//   { id: 8, name: "Floor 7", apartments: 10, top: "14%", rotate: "32deg" },
-//   { id: 9, name: "Floor 8", apartments: 10, top: "4%", rotate: "35deg" },
-// ];
-
-// function TowerView() {
-//    const [mood, setMood] = useState("true");
-//    const [snow, setSnow] = useState("true");
-
-//    const [hoveredFloorId, setHoveredFloorId] = useState(null);
-//    const hoveredFloor =
-//      floorsFront.find((f) => f.id === hoveredFloorId) ||
-//      floorsSide.find((f) => f.id === hoveredFloorId);
-
-//    const [navbarHeight, setNavbarHeight] = useState(0);
-
-//    useEffect(() => {
-//      // Find the navbar element (Modify the selector if needed)
-//      const navbar = document.querySelector("nav"); // Assuming <nav> is used for the Navbar
-//      if (navbar) {
-//        setNavbarHeight(navbar.offsetHeight);
-//      }
-
-//      // Update on window resize
-//      const handleResize = () => {
-//        if (navbar) setNavbarHeight(navbar.offsetHeight);
-//      };
-
-//      window.addEventListener("resize", handleResize);
-//      return () => window.removeEventListener("resize", handleResize);
-//    }, []);
-
-//    return (
-//      <div className="relative flex justify-center items-center bg-gray-200">
-//        <div className="relative">
-//          {/* Background Image */}
-//          {/* <img
-//          src="/assets/animatedImg/SR_33 - Photo 1.png"
-//          alt="Building"
-//          className=""
-//        /> */}
-//          {snow ? (
-//            mood ? (
-//              <img
-//                src="/assets/animatedImg/SR_33 - Photo 1.png"
-//                alt="Building"
-//                className="floor-plan-img w-screen"
-//                style={{
-//                  height: `calc(100vh - ${navbarHeight}px)`,
-//                }}
-//              />
-//            ) : (
-//              <img
-//                src="/assets/animatedImg/SR_31 - Photo 1.png"
-//                alt="Building"
-//                className="floor-plan-img w-screen"
-//                style={{
-//                  height: `calc(100vh - ${navbarHeight}px)`,
-//                }}
-//              />
-//            )
-//          ) : (
-//            <img
-//              src="/assets/animatedImg/SR_29 - Photo 1.png"
-//              alt="Building"
-//              className="floor-plan-img w-screen"
-//              style={{
-//                height: `calc(100vh - ${navbarHeight}px)`,
-//              }}
-//            />
-//          )}
-
-//          <div className="absolute top-32 right-32 flex gap-2">
-//            <div className="">
-//              {snow ? (
-//                <img
-//                  src="/assets/animatedImg/wind.png"
-//                  onClick={() => setSnow(false)}
-//                  className=" cursor-pointer hover:bg-black rounded-full"
-//                  alt="moonImg"
-//                />
-//              ) : (
-//                <img
-//                  src="/assets/animatedImg/snow.png"
-//                  onClick={() => setSnow(true)}
-//                  className=" cursor-pointer hover:bg-black rounded-full"
-//                  alt="sunImg"
-//                />
-//              )}
-//            </div>
-
-//            <div className="">
-//              {mood ? (
-//                <img
-//                  src="/assets/animatedImg/moon.png"
-//                  onClick={() => setMood(false)}
-//                  className=" cursor-pointer hover:bg-black rounded-full"
-//                  alt="moonImg"
-//                />
-//              ) : (
-//                <img
-//                  src="/assets/animatedImg/sun.png"
-//                  onClick={() => setMood(true)}
-//                  className=" cursor-pointer hover:bg-black rounded-full"
-//                  alt="sunImg"
-//                />
-//              )}
-//            </div>
-//          </div>
-
-//          {snow && (
-//            <>
-//              {/* Transparent Overlay Divs for Each Floor */}
-//              {floorsFront.map((floor) => (
-//                <div
-//                  key={`front-${floor.id}`}
-//                  className={`absolute left-1/2 w-[17%] h-[6%]  cursor-pointer ${
-//                    hoveredFloorId === floor.id ? "bg-white/25" : ""
-//                  }`}
-//                  style={{
-//                    transform: "translateX(-55%)",
-//                    rotate: floor.rotate,
-//                    top: floor.top,
-//                  }}
-//                  onMouseEnter={() => setHoveredFloorId(floor.id)}
-//                  onMouseLeave={() => setHoveredFloorId(null)}
-//                ></div>
-//              ))}
-//              {floorsSide.map((floor) => (
-//                <div
-//                  key={`side-${floor.id}`}
-//                  className={`absolute left-1/2 w-[10%]  h-[4%] md:h-[5%] cursor-pointer ${
-//                    hoveredFloorId === floor.id ? "" : ""
-//                  }`}
-//                  style={{
-//                    transform: "translateX(115%)",
-//                    rotate: floor.rotate,
-//                    top: floor.top,
-//                  }}
-//                  onMouseEnter={() => setHoveredFloorId(floor.id)}
-//                  onMouseLeave={() => setHoveredFloorId(null)}
-//                ></div>
-//              ))}
-
-//              {/* Floor Information Card */}
-//              {hoveredFloor && (
-//                <div
-//                  className="absolute pointer-events-none bg-white flex items-center gap-3 shadow-lg p-3 rounded-lg text-sm transition-opacity duration-200"
-//                  style={{
-//                    top: `calc(${hoveredFloor.top} + 1.5%)`,
-//                    left: "50%",
-//                    transform: "translateX(-50%)",
-//                  }}
-//                >
-//                  <Icon icon="circum:map" width="24" height="24" />
-//                  <div>
-//                    <p className="font-bold">{hoveredFloor.name}</p>
-//                    <p>apartments: {hoveredFloor.apartments}</p>
-//                  </div>
-//                </div>
-//              )}
-//            </>
-//          )}
-//        </div>
-//      </div>
-//    );
-// }
-
-// export default TowerView;
-
 "use client";
 import { Icon } from "@iconify-icon/react";
 import { useRouter } from "next/navigation";
@@ -218,8 +25,8 @@ const floorsFront = [
     id: 3,
     name: "Floor 2",
     apartments: 20,
-    top: "65%",
-    rotate: "-6deg",
+    top: "66%",
+    rotate: "-4deg",
   },
   {
     label: "3rd-floor",
@@ -227,31 +34,31 @@ const floorsFront = [
     name: "Floor 3",
     apartments: 22,
     top: "56%",
-    rotate: "-8deg",
+    rotate: "-6deg",
   },
   {
     label: "4th-floor",
     id: 5,
     name: "Floor 4",
     apartments: 10,
-    top: "45%",
-    rotate: "-10deg",
+    top: "47%",
+    rotate: "-8deg",
   },
   {
     label: "5th-floor",
     id: 6,
     name: "Floor 5",
     apartments: 10,
-    top: "35%",
-    rotate: "-14deg",
+    top: "38%",
+    rotate: "-10deg",
   },
   {
     label: "6th-floor",
     id: 7,
     name: "Floor 6",
     apartments: 20,
-    top: "25%",
-    rotate: "-16deg",
+    top: "27%",
+    rotate: "-12deg",
   },
   {
     label: "7th-floor",
@@ -259,15 +66,15 @@ const floorsFront = [
     name: "Floor 7",
     apartments: 20,
     top: "18%",
-    rotate: "-19deg",
+    rotate: "-15deg",
   },
   {
     label: "8th-floor",
     id: 9,
     name: "Floor 8",
     apartments: 20,
-    top: "8%",
-    rotate: "-22deg",
+    top: "11%",
+    rotate: "-15deg",
   },
 ];
 
@@ -416,16 +223,12 @@ function TowerView() {
 
   return (
     <div className="relative flex overflow-hidden justify-center items-center  ">
-      {/* <div className="flex absolute top-0  inset-0 bg-black opacity-100">
-        <img src="/assets/animatedImg/bg1.jpg" className="w-[50%] opacity-50" />
-        <img src="/assets/animatedImg/bg2.jpg" className="w-[50%] opacity-50" />
-      </div> */}
       <div className="relative flex justify-end w-full">
         {otherView ? (
           <img
             src="/assets/carousel/carouselImg1.png"
             alt="Building"
-            className="floor-plan-img w-screen max-h-[90vh] object-contain"
+            className="floor-plan-img w-screen max-h-[100vh] object-cover lg:object-fill"
             // style={{
             //   height: `calc(100vh - ${navbarHeight}px)`,
             // }}
@@ -435,7 +238,7 @@ function TowerView() {
             <img
               src="/assets/animatedImg/SR_33 - Photo 1.png"
               alt="Building"
-              className="floor-plan-img  w-screen h-full max-h-[90vh] object-contain"
+              className="floor-plan-img  w-screen h-full max-h-[100vh] object-cover lg:object-fill"
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
@@ -444,7 +247,7 @@ function TowerView() {
             <img
               src="/assets/animatedImg/SR_31 - Photo 1.png"
               alt="Building"
-              className="floor-plan-img  w-screen max-h-[90vh] object-contain "
+              className="floor-plan-img  w-screen max-h-[100vh] object-cover lg:object-fill "
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
@@ -454,7 +257,7 @@ function TowerView() {
           <img
             src="/assets/animatedImg/SR_29 - Photo 1.png"
             alt="Building"
-            className="floor-plan-img  w-screen max-h-[90vh] object-contain"
+            className="floor-plan-img  w-screen max-h-[100vh] object-cover lg:object-fill"
             // style={{
             //   height: `calc(100vh - ${navbarHeight}px)`,
             // }}
@@ -554,21 +357,22 @@ function TowerView() {
                 <Icon icon="circum:map" width="24" height="24" />
                 <div>
                   <p className="font-bold">{hoveredFloor.name}</p>
-                  {hoveredFloor.name.toLowerCase() !== "floor 4" && hoveredFloor.name.toLowerCase() !== "floor 5" && (
-                    <p>Apartments: {hoveredFloor.apartments}</p>
-                   )}
+                  {hoveredFloor.name.toLowerCase() !== "floor 4" &&
+                    hoveredFloor.name.toLowerCase() !== "floor 5" && (
+                      <p>Apartments: {hoveredFloor.apartments}</p>
+                    )}
                 </div>
               </div>
             )}
           </>
         )}
         {/* <--------left side----------->  */}
-        <div className="flex absolute  sm:left-[7rem] lg:left-[15rem] md:left-[7rem] left-[0rem] w-[70%] md:w-[25%] sm:w-[50%]  top-0 h-full items-start md:items-center flex-col sm:justify-between justify-normal ">
-          <div className="px-5 sm:px-14 mt-10 sm:mt-0 flex md:gap-3 gap-1 flex-col justify-center  md:py-3 py-0 ">
+        <div className="flex absolute left-[0rem] w-[100%] md:w-[50%] sm:w-[50%] top-0 h-full items-start md:items-start flex-col sm:justify-between justify-normal md:left-10">
+          <div className="px-5 sm:px-0 mt-10 sm:mt-0 flex md:gap-3 gap-1 flex-col justify-center md:py-3 py-0 ">
             <img
               src="/assets/logo/logo.png"
               alt="logo"
-              className=" h-[80px] w-[80px] sm:w-full sm:h-[100px] md:h-[150px] "
+              className=" h-[80px] w-[80px] sm:w-full sm:h-[100px] md:h-[150px]"
             />
             <button
               className="cursor-pointer border text-xs sm:text-base flex items-center gap-2 md:gap-1 border-white rounded-lg text-white py-2 px-2 sm:px-4"
@@ -594,15 +398,18 @@ function TowerView() {
           </div>
           {/* </div> */}
 
-          {show && (
-            <div className="absolute z-20 sm:mt-0 mt-20 w-full sm:h-full md:h-full h-[70%] top-0 sm:px-10 px-5 py-8  bg-[#FEFEFB]/25 backdrop-blur">
+          
+        </div>
+
+        {show && (
+            <div className="md:!left-0 absolute z-20 sm:mt-0 w-full md:w-[50%] lg:w-[35%] sm:h-full md:h-full h-[100%] top-0 sm:px-10 px-5 py-8  bg-[#FEFEFB]/25 backdrop-blur">
               <p
-                className="flex justify-end w-full cursor-pointer pb-2 font-semibold text-xl text-white"
+                className="flex items-center justify-end w-full cursor-pointer pb-2 font-semibold text-xl text-white"
                 onClick={() => setShow(false)}
               >
-                X
+                <Icon icon="proicons:cancel" width="24" height="24"  style={{color: "#37584F"}} />
               </p>
-              <div className="sm:h-[98%] md:h-[98%] h-[80%] overflow-y-auto scrollbar-thin scrollbar-thumb-[#37584F]/50 scrollbar-track-transparent">
+              <div className="h-[90%] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-[#37584F]/50 scrollbar-track-transparent">
                 {icons.map((icon, index) => (
                   <div
                     key={index}
@@ -624,7 +431,6 @@ function TowerView() {
               </div>
             </div>
           )}
-        </div>
       </div>
     </div>
   );
