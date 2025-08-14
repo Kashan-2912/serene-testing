@@ -55,7 +55,7 @@ function page() {
       </div>
 
       <div className="sm:py-32 py-20 flex flex-col md:flex-row gap-12 justify-center sm:justify-between items-center ">
-        <div className=" text-left w-full md:w-[60%]">
+        <div className=" text-left w-full md:w-1/2">
           <div className="flex items-center gap-3">
             <Icon
               icon="pajamas:issue-type-objective"
@@ -78,15 +78,15 @@ function page() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="w-full md:w-1/2 grid grid-cols-2 gap-2">
           <div>
-            <div className="mb-3">
+            <div className="mb-2">
               <Image
                 src="/assets/about/obj/objImg1.png"
                 alt="img"
                 width={170}
                 height={220}
-                className="rounded-[10px]"
+                className="rounded-[10px] w-full h-auto"
                 priority
               />
             </div>
@@ -96,19 +96,19 @@ function page() {
                 alt="img"
                 width={170}
                 height={140}
-                className="rounded-[10px]"
+                className="rounded-[10px] w-full h-auto"
                 priority
               />
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="mb-3">
+            <div className="mb-2">
               <Image
                 src="/assets/about/obj/objImg3.png"
                 alt="img"
                 width={170}
                 height={140}
-                className="rounded-[10px]"
+                className="rounded-[10px] w-full h-auto"
                 priority
               />
             </div>
@@ -118,7 +118,7 @@ function page() {
                 alt="img"
                 width={170}
                 height={220}
-                className="rounded-[10px] h-full object-cover"
+                className="rounded-[10px] w-full h-full object-cover"
                 priority
               />
             </div>
@@ -128,7 +128,7 @@ function page() {
 
       <div className="sm:py-26 py-20 flex flex-col md:flex-row gap-12 justify-center sm:justify-between items-center">
         {/* Image */}
-        <div className="relative w-full md:w-[40%] order-2 md:order-1">
+        <div className="relative w-full md:w-1/2 order-2 md:order-1">
           <Image
             src="/assets/about/opportunity/opr1.png"
             alt="img"
@@ -156,7 +156,7 @@ function page() {
         </div>
 
         {/* Text */}
-        <div className="text-left w-full md:w-[60%] order-1 md:order-2">
+        <div className="text-left w-full md:w-1/2 order-1 md:order-2">
           <div className="flex items-center gap-2">
             <Icon
               icon="fa6-solid:lightbulb"
