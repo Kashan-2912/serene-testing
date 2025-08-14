@@ -222,7 +222,7 @@ function TowerView() {
   }, []);
 
   return (
-    <div className="relative flex overflow-hidden justify-center items-center  ">
+    <div className="relative flex justify-center items-center  ">
       <div className="relative flex justify-end w-full">
         {otherView ? (
           <img
