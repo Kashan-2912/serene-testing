@@ -401,7 +401,7 @@ export default function SimpleMap() {
   useEffect(() => {
     if (!window.google) {
       const script = document.createElement('script');
-      script.src =  `https://maps.googleapis.com/maps/api/js?key=${NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`;
+      script.src =  `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`;
       script.onload = initMap;
       document.head.appendChild(script);
     } else {
