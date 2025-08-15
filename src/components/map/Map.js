@@ -414,7 +414,7 @@ export default function SimpleMap() {
 
         mapInstanceRef.current = new window.google.maps.Map(mapRef.current, {
           center: location,
-          zoom: 14, // zoomed out
+          zoom: 16, // zoomed out
           styles: customMapStyle,
           disableDefaultUI: false,
           zoomControl: true,
