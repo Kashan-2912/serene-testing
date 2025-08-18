@@ -39,14 +39,14 @@ function Footer() {
           </div>
 
           {/* Links Grid - Responsive 4 columns on md+, 2 columns below md */}
-          <div className="flex-1 lg:flex lg:justify-end lg:ml-20 lg:mt-20">
+          <div className="flex-1 lg:flex lg:justify-end lg:items-center lg:ml-20 lg:mt-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 inter">
               {/* Details Column */}
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold mb-2">Details</h3>
                 <Link
                   href="/about#about"
-                  className="hover:underline cursor-pointer text-xs md:text-sm"
+                  className="hover:underline cursor-pointer text-sm"
                 >
                   About us
                 </Link>
@@ -72,7 +72,7 @@ function Footer() {
 
               {/* Progress Column */}
               <div className="flex flex-col gap-4">
-                <h3 className="text-sm md:text-base lg:text-lg font-semibold mb-2">
+                <h3 className="text-lg font-semibold mb-2">
                   Progress
                 </h3>
                 <Link
@@ -109,7 +109,7 @@ function Footer() {
 
               {/* Floors Column */}
               <div className="flex flex-col gap-4">
-                <h3 className="text-sm md:text-base lg:text-lg font-semibold mb-2">
+                <h3 className="text-lg font-semibold mb-2">
                   Floors
                 </h3>
                 <Link
@@ -134,7 +134,7 @@ function Footer() {
 
               {/* Get In Touch Column */}
               <div className="flex flex-col gap-4">
-                <h3 className="text-sm md:text-base lg:text-lg font-semibold mb-2">
+                <h3 className="text-lg font-semibold mb-2">
                   Get In Touch
                 </h3>
                 <Link
