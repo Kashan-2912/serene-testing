@@ -168,7 +168,7 @@ function Footer() {
           <p className="hidden md:block">
             Copyright @{currentYear} Serene Heights Nathia Gali
           </p>
-          <div className="flex md:gap-3 lg:gap-4 items-center">
+          <div className="flex md:gap-3 lg:gap-4 gap-4 items-center">
             <a
               href="https://twitter.com/"
               target="_blank"
