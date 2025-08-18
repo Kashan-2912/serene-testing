@@ -99,18 +99,18 @@ export default function RootLayout({ children }) {
         `}
         </Script>
 
-        </head>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
-          >
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
+      >
 
-            <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
-              <Navbar />
-              <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
-              {/* {currentPath != "floor-plans" && <Footer />} */}
-              <Footer />
-            </div>
-            {/* <a
+        <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
+          <Navbar />
+          <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
+          {/* {currentPath != "floor-plans" && <Footer />} */}
+          <Footer />
+        </div>
+        {/* <a
           href="https://wa.me/+923214979447"
           target="_blank"
           rel="noopener noreferrer"
@@ -118,14 +118,14 @@ export default function RootLayout({ children }) {
         >
           <Icon icon="logos:whatsapp-icon" width="48" height="48" />
         </a> */}
-            <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-50 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
-              <ConIcon
-                bgColor={"bg-black/40 hover:bg-white/60"}
-                direction={"column"}
-                padding={"p-3"}
-              />
-            </div>
-            <style>{`
+        <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-50 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
+          {/* <ConIcon
+            bgColor={"bg-black/40 hover:bg-white/60"}
+            direction={"column"}
+            padding={"p-3"}
+          /> */}
+        </div>
+        <style>{`
           @keyframes popEffect {
             0%,
             100% {
@@ -151,8 +151,8 @@ export default function RootLayout({ children }) {
           }
              }
         `}</style>
-            <Analytics />
-          </body>
-        </html>
-        );
+        <Analytics />
+      </body>
+    </html>
+  );
 }
