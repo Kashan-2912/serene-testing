@@ -187,6 +187,7 @@ function Footer() {
               href="https://www.instagram.com/sereneheightshotelsandresorts/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hidden lg:block"
             >
               <Icon icon="streamline:instagram-solid" width="20" height="20" />
             </a>
@@ -201,6 +202,7 @@ function Footer() {
               href="https://www.facebook.com/sereneheightshotelsandresorts"
               target="_blank"
               rel="noopener noreferrer"
+              className="lg:hidden"
             >
               <Icon icon="mdi:github" width="24" height="24" />
             </a>
@@ -209,6 +211,7 @@ function Footer() {
               href="https://www.facebook.com/sereneheightshotelsandresorts"
               target="_blank"
               rel="noopener noreferrer"
+              className="lg:hidden"
             >
               <Icon icon="ph:hand-peace-light" width="24" height="24" />
             </a>
@@ -216,6 +219,7 @@ function Footer() {
               href="https://www.facebook.com/sereneheightshotelsandresorts"
               target="_blank"
               rel="noopener noreferrer"
+              className="lg:hidden"
             >
               <Icon icon="mingcute:dribbble-line" width="24" height="24" />
             </a>
