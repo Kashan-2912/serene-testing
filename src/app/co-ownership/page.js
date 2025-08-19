@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturesGrid from '@/components/coownership/FeaturesGrid';
 import SmartProperty from '@/components/coownership/SmartProperty';
+import CoOwnerShipModel from '@/components/coownership/CoOwnerShipModel';
 
 function Page() {
   return (
@@ -21,6 +22,8 @@ function Page() {
         </div>
 
         <SmartProperty />
+
+        <CoOwnerShipModel />
       </div>
     </div>
   );
