@@ -2,10 +2,11 @@ import React from 'react';
 import FeaturesGrid from '@/components/coownership/FeaturesGrid';
 import SmartProperty from '@/components/coownership/SmartProperty';
 import CoOwnerShipModel from '@/components/coownership/CoOwnerShipModel';
+import HowItWorks from '@/components/coownership/HowItWorks';
 
 function Page() {
   return (
-    <div className="py-10 md:py-32 px-7 md:px-12">
+    <div id='why-us' className="py-10 md:py-32 px-7 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col gap-28">
 
         <div>
@@ -24,6 +25,8 @@ function Page() {
         <SmartProperty />
 
         <CoOwnerShipModel />
+
+        <HowItWorks />
       </div>
     </div>
   );
