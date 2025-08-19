@@ -75,7 +75,7 @@ export const elements = [
       {
         sectionTitle: "FLOORS",
         items: [
-          // { id: "tower-view", name: "TOWER VIEW", section: "floor-plans" },
+          { id: "tower-view", name: "TOWER VIEW", section: "floor-plans" },
           {
             id: "basement-floor",
             name: "BASEMENT FLOOR",
@@ -124,15 +124,35 @@ export const elements = [
           { id: "december-2021", name: "DECEMBER 2021", section: "progress" },
         ],
       },
-      // {
-      //   sectionTitle: "GET IN TOUCH",
-      //   items: [
-      //     { id: "contact", name: "CONTACT US", section: "contact-us" },
-      //     { id: "location", name: "LOCATION", section: "contact-us" },
-      //   ],
-      // },
+      {
+        sectionTitle: "GET IN TOUCH",
+        items: [
+          { id: "contact", name: "CONTACT", section: "contact-us" },
+          { id: "location", name: "LOCATION", section: "contact-us" },
+        ],
+      },
     ],
   },
 
-  { key: "co-owner-ship", name: "CO-OWNERSHIP", id: "co-ownership" },
-];
+  {
+    key: "co-owner-ship",
+    name: "CO-OWNERSHIP",
+    id: "co-ownership",
+    submenu: [
+      {
+        sectionTitle: "SMART PROPERTY MODEL",
+        items: [
+          { id: "why-us", name: "WHY US?", section: "co-ownership" },
+          { id: "ownership-model", name: "OWNERSHIP MODEL", section: "co-ownership" },
+          { id: "how-it-works", name: "HOW IT WORKS", section: "co-ownership" },
+        ],
+      },
+      {
+        sectionTitle: "GET IN TOUCH",
+        items: [
+          { id: "contact", name: "CONTACT", section: "contact-us" },
+          { id: "location", name: "LOCATION", section: "contact-us" },
+        ],
+      },
+    ],
+  }];
