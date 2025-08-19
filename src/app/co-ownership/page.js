@@ -3,7 +3,7 @@ import FeaturesGrid from '@/components/coownership/FeaturesGrid';
 
 function Page() {
   return (
-    <div className="py-32 px-7 md:px-12 lg:px-20">
+    <div className="py-10 md:py-32 px-7 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
     
         <div className="text-left mb-10">
