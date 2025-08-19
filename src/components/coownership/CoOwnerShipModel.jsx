@@ -5,7 +5,7 @@ import PricingTable from './PricingTable';
 const CoOwnerShipModel = () => {
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8">
-      <p className="text-lg sm:text-2xl md:text-4xl lg:text-5xl text-center text-[#37584F] font-bold gravesendSans mb-6 sm:mb-8">
+      <p className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-center text-[#37584F] font-bold gravesendSans mb-6 sm:mb-8">
         THE CO OWNERSHIP MODEL
       </p>
       
