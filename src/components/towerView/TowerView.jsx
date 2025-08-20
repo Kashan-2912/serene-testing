@@ -222,189 +222,202 @@ function TowerView() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center">
-      <div className="relative flex justify-end w-full">
-        {otherView ? (
-          <img
-            src="/assets/carousel/carouselImg1.png"
-            alt="Building"
-            className="floor-plan-img w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
-            // style={{
-            //   height: `calc(100vh - ${navbarHeight}px)`,
-            // }}
-          />
-        ) : snow ? (
-          mood ? (
+    <>
+      <p className="text-xl text-center mb-10 md:text-5xl text-[#37584F] font-bold gravesendSans">
+        TOWER VIEW
+      </p>
+      <div className="relative flex justify-center items-center">
+        <div className="relative flex justify-end w-full">
+          {otherView ? (
             <img
-              src="/assets/animatedImg/SR_33 - Photo 1.png"
+              src="/assets/carousel/carouselImg1.png"
               alt="Building"
-              className="floor-plan-img  w-screen h-full md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
+              className="floor-plan-img w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
             />
+          ) : snow ? (
+            mood ? (
+              <img
+                src="/assets/animatedImg/SR_33 - Photo 1.png"
+                alt="Building"
+                className="floor-plan-img  w-screen h-full md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
+                // style={{
+                //   height: `calc(100vh - ${navbarHeight}px)`,
+                // }}
+              />
+            ) : (
+              <img
+                src="/assets/animatedImg/SR_31 - Photo 1.png"
+                alt="Building"
+                className="floor-plan-img  w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill "
+                // style={{
+                //   height: `calc(100vh - ${navbarHeight}px)`,
+                // }}
+              />
+            )
           ) : (
             <img
-              src="/assets/animatedImg/SR_31 - Photo 1.png"
+              src="/assets/animatedImg/SR_29 - Photo 1.png"
               alt="Building"
-              className="floor-plan-img  w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill "
+              className="floor-plan-img  w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
               // style={{
               //   height: `calc(100vh - ${navbarHeight}px)`,
               // }}
             />
-          )
-        ) : (
-          <img
-            src="/assets/animatedImg/SR_29 - Photo 1.png"
-            alt="Building"
-            className="floor-plan-img  w-screen md:max-h-[100%] lg:max-h-[100vh] sm:max-h-[100vh] object-cover md:object-fill"
-            // style={{
-            //   height: `calc(100vh - ${navbarHeight}px)`,
-            // }}
-          />
-        )}
+          )}
 
-        {!otherView && (
-          <div className="absolute z-10 sm:top-16 top-[8rem] sm:right-0 md:right-[3rem] right-3 flex gap-2">
-            <div className="">
-              {snow ? (
-                <img
-                  src="/assets/animatedImg/wind.png"
-                  onClick={() => setSnow(false)}
-                  className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
-                  alt="moonImg"
-                />
-              ) : (
-                <img
-                  src="/assets/animatedImg/snow.png"
-                  onClick={() => setSnow(true)}
-                  className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
-                  alt="sunImg"
-                />
-              )}
-            </div>
-
-            <div className="">
-              {mood ? (
-                <img
-                  src="/assets/animatedImg/moon.png"
-                  onClick={() => setMood(false)}
-                  className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
-                  alt="moonImg"
-                />
-              ) : (
-                <img
-                  src="/assets/animatedImg/sun.png"
-                  onClick={() => setMood(true)}
-                  className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
-                  alt="sunImg"
-                />
-              )}
-            </div>
-          </div>
-        )}
-
-        {snow && !otherView && (
-          <>
-            {/* Transparent Overlay Divs for Each Floor */}
-            {floorsFront.map((floor) => (
-              <div
-                key={`front-${floor.id}`}
-                className={`absolute left-[51%] w-[17%] h-[6%]  cursor-pointer ${
-                  hoveredFloorId === floor.id ? "bg-white/25" : ""
-                }`}
-                style={{
-                  transform: "translateX(-55%)",
-                  rotate: floor.rotate,
-                  top: floor.top,
-                }}
-                onMouseEnter={() => setHoveredFloorId(floor.id)}
-                onMouseLeave={() => setHoveredFloorId(null)}
-                onClick={() =>
-                  router.push(`/floor-plans/floors#${floor.label}`)
-                }
-              ></div>
-            ))}
-            {floorsSide.map((floor, index) => (
-              <div
-                key={`side-${floor.id}`}
-                className={`absolute right-[42%] w-[10%] h-[4%] md:h-[5%] cursor-pointer ${
-                  hoveredFloorId === floor.id ? "" : ""
-                }`}
-                style={{
-                  transform: "translateX(115%)",
-                  rotate: floor.rotate,
-                  top: floor.top,
-                }}
-                onMouseEnter={() => setHoveredFloorId(floor.id)}
-                onMouseLeave={() => setHoveredFloorId(null)}
-                onClick={() =>
-                  router.push(`/floor-plans/floors#${floor.label}`)
-                }
-              ></div>
-            ))}
-
-            {/* Floor Information Card */}
-            {hoveredFloor && (
-              <div
-                className="absolute pointer-events-none bg-white flex items-center gap-3 shadow-lg p-3 rounded-lg text-sm transition-opacity duration-200"
-                style={{
-                  top: `calc(${hoveredFloor.top} + 1.5%)`,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-              >
-                <Icon icon="circum:map" width="24" height="24" />
-                <div>
-                  <p className="font-bold">{hoveredFloor.name}</p>
-                  {hoveredFloor.name.toLowerCase() !== "floor 4" &&
-                    hoveredFloor.name.toLowerCase() !== "floor 5" && (
-                      <p>Apartments: {hoveredFloor.apartments}</p>
-                    )}
-                </div>
+          {!otherView && (
+            <div className="absolute z-10 sm:top-16 top-[8rem] sm:right-0 md:right-[3rem] right-3 flex gap-2">
+              <div className="">
+                {snow ? (
+                  <img
+                    src="/assets/animatedImg/wind.png"
+                    onClick={() => setSnow(false)}
+                    className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
+                    alt="moonImg"
+                  />
+                ) : (
+                  <img
+                    src="/assets/animatedImg/snow.png"
+                    onClick={() => setSnow(true)}
+                    className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
+                    alt="sunImg"
+                  />
+                )}
               </div>
-            )}
-          </>
-        )}
-        {/* <--------left side----------->  */}
-        <div className="flex absolute left-[0rem] w-[100%] md:w-[50%] sm:w-[50%] top-0 h-full items-start md:items-start flex-col sm:justify-between justify-normal md:left-10">
-          <div className="px-5 sm:px-0 mt-10 sm:mt-0 flex md:gap-3 gap-2 flex-col justify-center md:py-3 py-0 ">
-            <img
-              src="/assets/logo/logo.png"
-              alt="logo"
-              className="h-[80px] w-[80px] mb-1 sm:w-full sm:h-[100px] md:h-[150px]"
-            />
-            <button
-              className="cursor-pointer border text-xs sm:text-base flex items-center gap-2 md:gap-1 border-white rounded-lg text-white py-2 px-2 sm:px-4"
-              onClick={() => setOtherView(!otherView)}
-            >
-              <Icon icon="mdi:rotate-360" width="24" height="24" />
-              Other View
-            </button>
-            <button
-              onClick={() => setShow(true)}
-              className="cursor-pointer text-xs sm:text-base border flex items-center gap-2 border-white rounded-lg text-white py-2 px-2 sm:px-4"
-            >
-              Amenities
-              <Icon icon="iconamoon:arrow-down-2-thin" width="24" height="24" />
-            </button>
-          </div>
-          <div>
-            <img
-              src="/assets/carousel/dm.png"
-              alt="not found"
-              className="md:h-[150px] h-[80px] mt-5 pl-1 sm:pl-16 md:pl-0"
-            />
-          </div>   
-        </div>
 
-        {show && (
+              <div className="">
+                {mood ? (
+                  <img
+                    src="/assets/animatedImg/moon.png"
+                    onClick={() => setMood(false)}
+                    className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
+                    alt="moonImg"
+                  />
+                ) : (
+                  <img
+                    src="/assets/animatedImg/sun.png"
+                    onClick={() => setMood(true)}
+                    className=" cursor-pointer hover:bg-black rounded-full h-10 md:h-full"
+                    alt="sunImg"
+                  />
+                )}
+              </div>
+            </div>
+          )}
+
+          {snow && !otherView && (
+            <>
+              {/* Transparent Overlay Divs for Each Floor */}
+              {floorsFront.map((floor) => (
+                <div
+                  key={`front-${floor.id}`}
+                  className={`absolute left-[51%] w-[17%] h-[6%]  cursor-pointer ${
+                    hoveredFloorId === floor.id ? "bg-white/25" : ""
+                  }`}
+                  style={{
+                    transform: "translateX(-55%)",
+                    rotate: floor.rotate,
+                    top: floor.top,
+                  }}
+                  onMouseEnter={() => setHoveredFloorId(floor.id)}
+                  onMouseLeave={() => setHoveredFloorId(null)}
+                  onClick={() =>
+                    router.push(`/floor-plans/floors#${floor.label}`)
+                  }
+                ></div>
+              ))}
+              {floorsSide.map((floor, index) => (
+                <div
+                  key={`side-${floor.id}`}
+                  className={`absolute right-[42%] w-[10%] h-[4%] md:h-[5%] cursor-pointer ${
+                    hoveredFloorId === floor.id ? "" : ""
+                  }`}
+                  style={{
+                    transform: "translateX(115%)",
+                    rotate: floor.rotate,
+                    top: floor.top,
+                  }}
+                  onMouseEnter={() => setHoveredFloorId(floor.id)}
+                  onMouseLeave={() => setHoveredFloorId(null)}
+                  onClick={() =>
+                    router.push(`/floor-plans/floors#${floor.label}`)
+                  }
+                ></div>
+              ))}
+
+              {/* Floor Information Card */}
+              {hoveredFloor && (
+                <div
+                  className="absolute pointer-events-none bg-white flex items-center gap-3 shadow-lg p-3 rounded-lg text-sm transition-opacity duration-200"
+                  style={{
+                    top: `calc(${hoveredFloor.top} + 1.5%)`,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                >
+                  <Icon icon="circum:map" width="24" height="24" />
+                  <div>
+                    <p className="font-bold">{hoveredFloor.name}</p>
+                    {hoveredFloor.name.toLowerCase() !== "floor 4" &&
+                      hoveredFloor.name.toLowerCase() !== "floor 5" && (
+                        <p>Apartments: {hoveredFloor.apartments}</p>
+                      )}
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+          {/* <--------left side----------->  */}
+          <div className="flex absolute left-[0rem] w-[100%] md:w-[50%] sm:w-[50%] top-0 h-full items-start md:items-start flex-col sm:justify-between justify-normal md:left-10">
+            <div className="px-5 sm:px-0 mt-10 sm:mt-0 flex md:gap-3 gap-2 flex-col justify-center md:py-3 py-0 ">
+              <img
+                src="/assets/logo/logo.png"
+                alt="logo"
+                className="h-[80px] w-[80px] mb-1 sm:w-full sm:h-[100px] md:h-[150px]"
+              />
+              <button
+                className="cursor-pointer border text-xs sm:text-base flex items-center gap-2 md:gap-1 border-white rounded-lg text-white py-2 px-2 sm:px-4"
+                onClick={() => setOtherView(!otherView)}
+              >
+                <Icon icon="mdi:rotate-360" width="24" height="24" />
+                Other View
+              </button>
+              <button
+                onClick={() => setShow(true)}
+                className="cursor-pointer text-xs sm:text-base border flex items-center gap-2 border-white rounded-lg text-white py-2 px-2 sm:px-4"
+              >
+                Amenities
+                <Icon
+                  icon="iconamoon:arrow-down-2-thin"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+            <div>
+              <img
+                src="/assets/carousel/dm.png"
+                alt="not found"
+                className="md:h-[150px] h-[80px] mt-5 pl-1 sm:pl-16 md:pl-0"
+              />
+            </div>
+          </div>
+
+          {show && (
             <div className="md:!left-0 absolute z-20 sm:mt-0 w-full md:w-[50%] lg:w-[35%] sm:h-full md:h-full h-[100%] top-0 sm:px-10 px-5 py-8  bg-[#FEFEFB]/25 backdrop-blur">
               <p
                 className="flex items-center justify-end w-full cursor-pointer pb-2 font-semibold text-xl text-white"
                 onClick={() => setShow(false)}
               >
-                <Icon icon="proicons:cancel" width="24" height="24"  style={{color: "#37584F"}} />
+                <Icon
+                  icon="proicons:cancel"
+                  width="24"
+                  height="24"
+                  style={{ color: "#37584F" }}
+                />
               </p>
               <div className="h-[90%] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-[#37584F]/50 scrollbar-track-transparent">
                 {icons.map((icon, index) => (
@@ -428,8 +441,9 @@ function TowerView() {
               </div>
             </div>
           )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
