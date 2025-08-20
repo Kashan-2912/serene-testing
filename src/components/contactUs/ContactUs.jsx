@@ -9,16 +9,7 @@ function ContactUs() {
   const [loading, setLoading] = useState(false);
   const [dropdownValues, setDropdownValues] = useState({
     interestedIn: "",
-    budget: "",
   });
-
-  // Only keep budgetOptions since interestedIn is now handled internally
-  const budgetOptions = [
-    { text: "What is your investment budget range?" },
-    { text: "Under PKR 1 Crore" },
-    { text: "PKR 1.5 Crore - 2 Crore" },
-    { text: "PKR 2 Crore - PKR 3 Crore" },
-  ];
 
   const handleDropdownChange = (name, value) => {
     setDropdownValues((prev) => ({
