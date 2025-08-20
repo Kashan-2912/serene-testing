@@ -3,6 +3,7 @@ import FeaturesGrid from '@/components/coownership/FeaturesGrid';
 import SmartProperty from '@/components/coownership/SmartProperty';
 import CoOwnerShipModel from '@/components/coownership/CoOwnerShipModel';
 import HowItWorks from '@/components/coownership/HowItWorks';
+import LastSection from '@/components/coownership/LastSection';
 
 function Page() {
   return (
@@ -27,6 +28,8 @@ function Page() {
         <CoOwnerShipModel />
 
         <HowItWorks />
+
+        <LastSection />
       </div>
     </div>
   );
