@@ -233,7 +233,7 @@ export default function Home() {
 
 
         {/* <Section7 /> */}
-        <div className="text-center lg:px-36 md:px-20 xs:px-6 ">
+        <div className="text-center lg:px-36 md:px-20 xs:px-6 mb-10">
           <p className="sm:text-5xl text-4xl font-bold py-16 gravesendSans">
             ENQUIRE NOW
           </p>
