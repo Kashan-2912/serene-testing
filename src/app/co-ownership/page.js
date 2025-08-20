@@ -6,8 +6,8 @@ import HowItWorks from '@/components/coownership/HowItWorks';
 
 function Page() {
   return (
-    <div id='why-us' className="py-10 md:py-32 px-7 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col gap-28">
+    <div id='why-us' className="py-10 md:py-32 px-6 md:px-16 lg:px-36">
+      <div className=" mx-auto flex flex-col gap-28">
 
         <div>
           <div className="text-left mb-10">

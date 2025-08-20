@@ -151,7 +151,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="px-8 ">
+    <div className="px-8 " id="how-it-works">
       <h1 className="uppercase font-semibold text-[#37584F] pb-12 text-center sm:text-5xl text-3xl gravesendSans">
         How It Works
       </h1>
@@ -203,17 +203,17 @@ const HowItWorks = () => {
             </div>
 
             {/* Content Section */}
-            <div className="w-full pb-20">
+            <div className="w-full sm:pb-20">
               <h3
                 className={`${
                   isIconActive(index) ? "text-[#37584F]" : "text-[#222222] opacity-70"
-                } font-bold sm:text-4xl text-2xl gravesendSans mt-2 transition-colors duration-500 ease-in-out`}
+                } font-bold sm:text-4xl text-xl gravesendSans mt-2 transition-colors duration-500 ease-in-out`}
               >
                 {item.title}
               </h3>
 
               <p
-                className="text-[#222222] text-lg mt-4 leading-relaxed transition-colors duration-500 ease-in-out"
+                className="text-[#222222] sm:text-lg text-sm mt-4 leading-relaxed transition-colors duration-500 ease-in-out"
               >
                 {item.description}
               </p>
