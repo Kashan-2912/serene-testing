@@ -9,35 +9,35 @@ const HowItWorks = () => {
       title: "Fill booking form",
       description:
         "Apply easily with just a few personal and financial details.",
-      icon: "material-symbols:step-1",
+      icon: "mingcute:document-2-line",
     },
     {
       label: "STEP 2",
       title: "CHOOSE PAYMENT PLAN",
       description:
         "Affordable down payment & easy monthly installments.",
-      icon: "material-symbols:step-2",
+      icon: "solar:wallet-money-linear",
     },
     {
       label: "STEP 3",
       title: "CONFIRM OWNERSHIP",
       description:
         "Once payments are complete, your Smart Property Share in Serene Heights is secured.",
-      icon: "material-symbols:step-3",
+      icon: "emojione-monotone:handshake",
     },
     {
       label: "STEP 4",
       title: "MANAGED BY EXPERTS",
       description:
         "DM Consortium takes care of rentals, maintenance & returns.",
-      icon: "material-symbols:step-4",
+      icon: "bitcoin-icons:verify-outline",
     },
     {
       label: "STEP 5",
       title: "TRANSFERABLE SHARES",
       description:
         "Sell or transfer your ownership anytime",
-      icon: "material-symbols:step-5",
+      icon: "humbleicons:coins",
     },
   ];
 
