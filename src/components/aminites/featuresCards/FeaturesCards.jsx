@@ -24,7 +24,7 @@ function FeaturesCards() {
   }, []);
 
   return (
-    <div className="sm:px-16 px-5">
+    <div className="sm:px-2 px-8">
       <div className="pt-16 bg-white h-full w-full flex flex-col md:flex-row items-stretch gap-8 justify-center ">
         {featuresElements.slice(0, 3).map((data, index) => (
           <div
