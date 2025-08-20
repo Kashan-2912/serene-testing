@@ -37,7 +37,7 @@ const smartPropertyFeatures = [
 const FeatureCard = ({ data, screenSize, index, isSecondRow = false }) => {
   return (
     <div
-      className={`feature-card bg-[#FEFEFB] rounded-[16px] w-full p-10 flex flex-col justify-center items-start text-left cursor-pointer 
+      className={`feature-card bg-[#FEFEFB] rounded-[16px] w-full p-6 sm:p-10 flex flex-col justify-center items-start text-left cursor-pointer 
         shadow-[0px_0px_4px_1px_#0000001F] transition-all duration-300 
         hover:scale-105 hover:shadow-[0px_4px_15px_rgba(55,88,79,0.8)]`}
       style={{
