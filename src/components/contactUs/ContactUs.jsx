@@ -12,18 +12,7 @@ function ContactUs() {
     budget: "",
   });
 
-  const interestedInOptions = [
-    {
-      text: "How many 50 sq ft Smart Property Units of Serene Heights, Nathia Gali would you like to co-own?",
-    },
-    { text: "1 Unit - PKR 2,000,000 (Down Payment: PKR 600,000)" },
-    { text: "2 Units - PKR 4,000,000 (Down Payment: PKR 1,200,000)" },
-    { text: "3 Units - PKR 6,000,000 (Down Payment: PKR 1,800,000)" },
-    {
-      text: "More than 3 Units",
-    },
-  ];
-
+  // Only keep budgetOptions since interestedIn is now handled internally
   const budgetOptions = [
     { text: "What is your investment budget range?" },
     { text: "Under PKR 1 Crore" },
@@ -57,10 +46,9 @@ function ContactUs() {
     }
     
     if (!values.city.trim()) {
-      errors.city = "City is required"; // Fixed: was errors.message
+      errors.city = "City is required";
     }
 
-    
     return errors;
   };
 
@@ -158,22 +146,10 @@ function ContactUs() {
                     <DropdownRadio
                       label="Interested in"
                       name="interestedIn"
-                      options={interestedInOptions}
+                      options={[]}
                       selectedValue={dropdownValues.interestedIn}
                       onChange={handleDropdownChange}
                       placeholder="Select your interest"
-                      errors={errors}
-                      touched={touched}
-                      setFieldTouched={setFieldTouched}
-                    />
-
-                    <DropdownRadio
-                      label="Budget"
-                      name="budget"
-                      options={budgetOptions}
-                      selectedValue={dropdownValues.budget}
-                      onChange={handleDropdownChange}
-                      placeholder="Select your budget range"
                       errors={errors}
                       touched={touched}
                       setFieldTouched={setFieldTouched}
