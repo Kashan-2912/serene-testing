@@ -154,13 +154,13 @@ export async function POST(request) {
       console.log(userContact, "userContact");
 
       const transporter = nodemailer.createTransport({
-        // user: "texinitytesting123@gmail.com",
-        // pass: "qndx pkan luvz ",
-
         service: "gmail",
         auth: {
-          user: "info@svype.net",
-          pass: "ekvs kamh prar zkhu",
+
+          user: "mkashan2912@gmail.com",
+          pass: "lkzs rusb arup axgn",
+          // user: "info@svype.net",
+          // pass: "ekvs kamh prar zkhu",
         },
         // tls: { rejectUnauthorized: false },
       });
@@ -168,9 +168,10 @@ export async function POST(request) {
       const mailOptions = {
         // from: "texinitytesting123@gmail.com",
 
-        from: "info@svype.net",
+        // from: "info@svype.net",
         replyTo: email,
-        to: "info@sereneheightsnathiagali.com",
+        // to: "info@sereneheightsnathiagali.com",
+        to: "kashan.ashraf2912@gmail.com",
         subject: "New Lead from Website",
         html: `
         <p>You have received a new contact us submission:</p>

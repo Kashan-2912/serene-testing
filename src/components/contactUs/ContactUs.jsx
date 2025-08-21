@@ -61,7 +61,7 @@ function ContactUs() {
       const submitData = {
         ...values,
         ...dropdownValues,
-        check: "This form is submitted from texinity website",
+        check: "This form is submitted from Svype website",
       };
 
       const response = await fetch("/api/contactus", {
