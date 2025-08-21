@@ -124,7 +124,7 @@ const DropdownRadio = ({
         </button>
 
         {(isOpen || showNested) && (
-          <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg md:max-h-60 max-h-52 overflow-y-auto">
+          <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg lg:max-h-52 max-h-52 overflow-y-auto">
             {showNested ? (
               // Show nested dropdown options
               <>
