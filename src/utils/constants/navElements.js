@@ -136,7 +136,7 @@ export const elements = [
 
   {
     key: "co-owner-ship",
-    name: "CO-OWNERSHIP",
+    name: "SMART PROPERTY UNIT",
     id: "co-ownership",
     submenu: [
       {
