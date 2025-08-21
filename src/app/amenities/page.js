@@ -2,6 +2,8 @@ import AminitiesCards from "@/components/aminites/aminitiesCards/AminitiesCards"
 import FeaturesCards from "@/components/aminites/featuresCards/FeaturesCards";
 import React from "react";
 
+// px-6 md:px-16 lg:px-36
+
 function page() {
   return (
     <div

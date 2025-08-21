@@ -159,8 +159,8 @@ export async function POST(request) {
 
         service: "gmail",
         auth: {
-          user: "mkashan2912@gmail.com",
-          pass: "lkzs rusb arup axgn",
+          user: "info@svype.net",
+          pass: "ekvs kamh prar zkhu",
         },
         // tls: { rejectUnauthorized: false },
       });
@@ -168,9 +168,9 @@ export async function POST(request) {
       const mailOptions = {
         // from: "texinitytesting123@gmail.com",
 
-        // from: "mkashan2912@gmail.com",
+        from: "info@svype.net",
         replyTo: email,
-        to: "kashan.ashraf2912@gmail.com",
+        to: "info@sereneheightsnathiagali.com",
         subject: "New Lead from Website",
         html: `
         <p>You have received a new contact us submission:</p>
