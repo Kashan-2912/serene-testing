@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
 
         <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
           <Navbar />
-          <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
+          <main className="flex-grow w-full max-w-full overflow-x-hidden pt-36">{children}</main>
           {/* {currentPath != "floor-plans" && <Footer />} */}
           <Footer />
         </div>

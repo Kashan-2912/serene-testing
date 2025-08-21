@@ -116,7 +116,7 @@ function Navbar() {
               ? "bg-white/90 !text-[#37584F] backdrop-blur-sm drop-shadow-xl "
               : `bg-transparent hover:!bg-white/90 ${textColor} hover:${() =>
                   setImgColor(true)} hover:backdrop-blur-sm`
-          } sticky top-0 start-0 z-30 w-full inter `}
+          } fixed top-0 start-0 z-30 w-full inter`}
           onMouseEnter={() => setImgColor(true)}
           onMouseLeave={() => setImgColor(false)}
         >
