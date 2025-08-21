@@ -172,7 +172,7 @@ export default function ImgCarousel() {
           <video
             ref={video1Ref}
             className="h-full w-full object-cover"
-            src="https://ik.imagekit.io/dueovwndo/landingVideo.mp4?updatedAt=1754382936223"
+            src="/assets/home/landingVideo.mp4"
             autoPlay
             preload="auto"
             muted
@@ -300,7 +300,7 @@ export default function ImgCarousel() {
           <video
             ref={video2Ref}
             className="h-full w-full object-cover"
-            src="https://ik.imagekit.io/dueovwndo/landingVideo2.mp4?updatedAt=1754382936153"
+            src="/assets/home/landingVideo2.mp4"
             autoPlay
             preload="auto"
             muted

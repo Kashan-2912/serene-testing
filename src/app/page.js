@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <div className="relative w-full overflow-x-hidden  ">
 
-      {/* Compressed Videos are fetched from imagekit */}
       <div className="relative">
         <ImgCarousel />
       </div>
