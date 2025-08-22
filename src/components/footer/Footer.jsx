@@ -12,7 +12,7 @@ function Footer() {
   if (!showFooter) return null;
 
   return (
-    <div className="bottom-0 w-full z-40 bg-footer-gradient text-white">
+    <div className="bottom-0 w-screen z-40 bg-footer-gradient text-white">
       <div className="px-8 sm:px-20 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Logo and Contact Info - Stays separate */}
