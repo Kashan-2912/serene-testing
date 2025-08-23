@@ -12,7 +12,7 @@ function Footer() {
   if (!showFooter) return null;
 
   return (
-    <div className="bottom-0 w-screen z-40 bg-footer-gradient text-white">
+    <div className="bottom-0 w-full z-40 bg-footer-gradient text-white">
       <div className="px-8 sm:px-20 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Logo and Contact Info - Stays separate */}
@@ -169,13 +169,13 @@ function Footer() {
             Copyright @{currentYear} Serene Heights Nathia Gali
           </p>
           <div className="flex md:gap-3 lg:gap-4 gap-4 items-center">
-            <a
+            {/* <a
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Icon icon="mdi:twitter" width="24" height="24" />
-            </a>
+            </a> */}
             <a
               href="https://www.linkedin.com/company/serene-heights-hotel-resort"
               target="_blank"
@@ -227,7 +227,7 @@ function Footer() {
       </div>
 
       <div className="p-4 text-center bg-[#18332A] inter">
-        Powered By <u>Svype</u>
+        Powered By <a href="https://www.svype.net/" target="_blank"><u>Svype</u></a>
       </div>
     </div>
   );
