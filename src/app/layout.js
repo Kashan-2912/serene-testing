@@ -1,4 +1,3 @@
-
 import {
   Chivo,
   Geist,
@@ -85,24 +84,33 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+
       <head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-LH33R5NMZE"
-        />
+        {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-LH33R5NMZE');
-        `}
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N5M6LRHD');
+          `}
         </Script>
-
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${poppins.variable} ${cinzel.variable} ${workSans.variable} ${inter.variable} ${helveticaNeue.variable} ${gravesendSans.variable} antialiased overflow-x-hidden`}
       >
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N5M6LRHD"
+            height="0" 
+            width="0" 
+            style={{display:"none", visibility:"hidden"}}
+          ></iframe>
+        </noscript>
 
         <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
           <Navbar />
@@ -118,7 +126,7 @@ export default function RootLayout({ children }) {
         >
           <Icon icon="logos:whatsapp-icon" width="48" height="48" />
         </a> */}
-        <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-50 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
+        <div className="fixed bottom-5 right-5 md:bottom-9 md:right-9 z-30 p-2 animate-po hover:scale-125 transition-transform  hover:animate-none">
           <ConIcon
             bgColor={"bg-black/40 hover:bg-white/60"}
             direction={"column"}
