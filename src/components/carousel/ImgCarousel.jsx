@@ -7,30 +7,33 @@ import { motion } from "framer-motion";
 
 export default function ImgCarousel() {
   const [selectedSlide, setSelectedSlide] = useState(0);
-
   const [showAnims, setShowAnims] = useState(false);
 
-  const [swipeable, setSwipeable] = useState(false);
-  const [showArrows, setShowArrows] = useState(true);
+  // Removed swipeable and showArrows since we only have one slide
+  // const [swipeable, setSwipeable] = useState(false);
+  // const [showArrows, setShowArrows] = useState(true);
 
-  const video1Ref = useRef(null);
-  const video2Ref = useRef(null);
+  // Removed video refs since no videos
+  // const video1Ref = useRef(null);
+  // const video2Ref = useRef(null);
+  
   const delayTimerRef = useRef(null);
-
   const DELAY_MS = 5000;
 
-  useEffect(() => {
-    const handleResize = () => {
-      setShowArrows(window.innerWidth > 768);
-      setSwipeable(window.innerWidth > 768);
-    };
+  // Removed resize handler since no arrows/swipe needed for single slide
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setShowArrows(window.innerWidth > 768);
+  //     setSwipeable(window.innerWidth > 768);
+  //   };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
+  // Changed totalSlides to 3
   const totalSlides = 3;
   const nextIndex = useCallback((i) => (i + 1) % totalSlides, [totalSlides]);
 
@@ -50,71 +53,58 @@ export default function ImgCarousel() {
     }, DELAY_MS);
   }, [DELAY_MS, clearDelayTimer, nextIndex]);
 
-  const freezeLastFrame = useCallback((video) => {
-    try {
-      const dur = video.duration;
-      if (Number.isFinite(dur) && dur > 0) {
-        video.currentTime = Math.max(0, dur - 0.05);
-      }
-    } catch {}
-    video.pause();
-  }, []);
+  // Removed video-related functions
+  // const freezeLastFrame = useCallback((video) => {
+  //   try {
+  //     const dur = video.duration;
+  //     if (Number.isFinite(dur) && dur > 0) {
+  //       video.currentTime = Math.max(0, dur - 0.05);
+  //     }
+  //   } catch {}
+  //   video.pause();
+  // }, []);
 
-  const stopAllVideos = useCallback(() => {
-    for (const v of [video1Ref.current, video2Ref.current]) {
-      if (!v) continue;
-      try {
-        v.pause();
-        v.currentTime = 0;
-      } catch {}
-    }
-  }, []);
+  // const stopAllVideos = useCallback(() => {
+  //   for (const v of [video1Ref.current, video2Ref.current]) {
+  //     if (!v) continue;
+  //     try {
+  //       v.pause();
+  //       v.currentTime = 0;
+  //     } catch {}
+  //   }
+  // }, []);
 
   useEffect(() => {
     setShowAnims(false);
     clearDelayTimer();
-    stopAllVideos();
+    // stopAllVideos(); // Removed since no videos
 
-    const v1 = video1Ref.current;
-    const v2 = video2Ref.current;
+    // Removed video refs
+    // const v1 = video1Ref.current;
+    // const v2 = video2Ref.current;
 
-    const onEnded1 = () => {
-      if (selectedSlide !== 0) return;
-      if (v1) freezeLastFrame(v1);
-      startDelayThenAdvance();
-    };
-    const onEnded2 = () => {
-      if (selectedSlide !== 2) return;
-      if (v2) freezeLastFrame(v2);
-      startDelayThenAdvance();
-    };
+    // Removed video event handlers
+    // const onEnded1 = () => {
+    //   if (selectedSlide !== 0) return;
+    //   if (v1) freezeLastFrame(v1);
+    //   startDelayThenAdvance();
+    // };
+    // const onEnded2 = () => {
+    //   if (selectedSlide !== 2) return;
+    //   if (v2) freezeLastFrame(v2);
+    //   startDelayThenAdvance();
+    // };
 
-    if (selectedSlide === 0) {
-      if (v1) {
-        v1.loop = false;
-        v1.currentTime = 0;
-        v1.play().catch(() => {
-          startDelayThenAdvance();
-        });
-        v1.addEventListener("ended", onEnded1);
-      }
-    } else if (selectedSlide === 1) {
+    // Handle all image slides
+    if (selectedSlide === 0 || selectedSlide === 1 || selectedSlide === 2) {
       startDelayThenAdvance();
-    } else if (selectedSlide === 2) {
-      if (v2) {
-        v2.loop = false;
-        v2.currentTime = 0;
-        v2.play().catch(() => {
-          startDelayThenAdvance();
-        });
-        v2.addEventListener("ended", onEnded2);
-      }
     }
 
-    return () => {
-      v1?.removeEventListener("ended", onEnded1);
-      v2?.removeEventListener("ended", onEnded2);
-    };
+    // Removed video event listener cleanup
+    // return () => {
+    //   v1?.removeEventListener("ended", onEnded1);
+    //   v2?.removeEventListener("ended", onEnded2);
+    // };
   }, [selectedSlide]);
 
   const handleChange = (index) => {
@@ -162,13 +152,13 @@ export default function ImgCarousel() {
         centerMode
         centerSlidePercentage={100}
         showStatus={false}
-        showArrows={showArrows}
-        swipeable={swipeable}
+        showArrows={true} // Enable arrows for multiple slides
+        swipeable={true} // Enable swipe for multiple slides
         autoPlay={false} // we control advancement ourselves
         // interval is ignored when autoPlay is false
       >
-        {/* VIDEO #1 */}
-        <div className="relative h-[100vh]" key={`video-0-${selectedSlide}`}>
+        {/* REMOVED VIDEO #1 */}
+        {/* <div className="relative h-[100vh]" key={`video-0-${selectedSlide}`}>
           <video
             ref={video1Ref}
             className="h-full w-full object-cover"
@@ -231,9 +221,71 @@ export default function ImgCarousel() {
               </motion.div>
             </div>
           </Overlay>
+        </div> */}
+
+        {/* IMAGE SLIDE 1 - Index 0 */}
+        <div className="relative h-[100vh]" key={`image-0-${selectedSlide}`}>
+          <img
+            className="h-full w-full object-cover"
+            src="/assets/carousel/carouselImg1.png"
+            alt="Resort exterior with mountain landscape"
+          />
+
+          <Overlay active={selectedSlide === 0}>
+            <div className="pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={
+                  selectedSlide === 0 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: -500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 1.0 }}
+              >
+                {Headings}
+              </motion.div>
+            </div>
+
+            <div className="flex flex-col md:flex-row w-full justify-around items-center">
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={
+                  selectedSlide === 0 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: -500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 1.0 }}
+              >
+                <img
+                  className="h-28 md:h-40"
+                  src="/assets/carousel/dm.png"
+                  alt="DM brand mark"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ x: 500, opacity: 0 }}
+                animate={
+                  selectedSlide === 0 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: 500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 2.0 }}
+                className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md font-helvetica font-medium"
+              >
+                <ul className="text-left">
+                  <li>
+                    • Monthly Rental Income After <br />
+                    <span className="pl-3">Operations</span>
+                  </li>
+                  <li>• Free 28 Nights Stay Annually</li>
+                </ul>
+              </motion.div>
+            </div>
+          </Overlay>
         </div>
 
-        {/* IMAGE SLIDE */}
+        {/* IMAGE SLIDE 2 - Index 1 */}
         <div className="relative h-[100vh]" key={`image-1-${selectedSlide}`}>
           <img
             className="h-full w-full object-cover"
@@ -295,8 +347,70 @@ export default function ImgCarousel() {
           </Overlay>
         </div>
 
-        {/* VIDEO #2 */}
-        <div className="relative h-[100vh]" key={`video-2-${selectedSlide}`}>
+        {/* IMAGE SLIDE 3 - Index 2 */}
+        {/* <div className="relative h-[100vh]" key={`image-2-${selectedSlide}`}>
+          <img
+            className="h-full w-full object-cover"
+            src="/assets/carousel/carouselImg1.png"
+            alt="Resort exterior with mountain landscape"
+          />
+
+          <Overlay active={selectedSlide === 2}>
+            <div className="pt-20 px-0 lg:px-24 xl:px-32 w-full flex justify-center md:justify-between">
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={
+                  selectedSlide === 2 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: -500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 1.0 }}
+              >
+                {Headings}
+              </motion.div>
+            </div>
+
+            <div className="flex flex-col md:flex-row w-full justify-around items-center">
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={
+                  selectedSlide === 2 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: -500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 1.0 }}
+              >
+                <img
+                  className="h-28 md:h-40"
+                  src="/assets/carousel/dm.png"
+                  alt="DM brand mark"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ x: 500, opacity: 0 }}
+                animate={
+                  selectedSlide === 2 && showAnims
+                    ? { x: 0, opacity: 1 }
+                    : { x: 500, opacity: 0 }
+                }
+                transition={{ duration: 0.3, ease: "linear", delay: 2.0 }}
+                className="bg-[#63636380]/50 p-4 border-s-4 backdrop-blur-sm border-[#E8FF61] rounded-md font-helvetica font-medium"
+              >
+                <ul className="text-left">
+                  <li>
+                    • Monthly Rental Income After <br />
+                    <span className="pl-3">Operations</span>
+                  </li>
+                  <li>• Free 28 Nights Stay Annually</li>
+                </ul>
+              </motion.div>
+            </div>
+          </Overlay>
+        </div> */}
+
+        {/* REMOVED VIDEO #2 */}
+        {/* <div className="relative h-[100vh]" key={`video-2-${selectedSlide}`}>
           <video
             ref={video2Ref}
             className="h-full w-full object-cover"
@@ -358,7 +472,7 @@ export default function ImgCarousel() {
               </motion.div>
             </div>
           </Overlay>
-        </div>
+        </div> */}
       </Carousel>
     </div>
   );
