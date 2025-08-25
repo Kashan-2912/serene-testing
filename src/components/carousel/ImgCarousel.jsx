@@ -286,7 +286,7 @@ export default function ImgCarousel() {
         </div>
 
         {/* IMAGE SLIDE 2 - Index 1 */}
-        <div className="relative h-[100vh]" key={`image-1-${selectedSlide}`}>
+        {/* <div className="relative h-[100vh]" key={`image-1-${selectedSlide}`}>
           <img
             className="h-full w-full object-cover"
             src="/assets/carousel/carouselImg1.png"
@@ -345,7 +345,7 @@ export default function ImgCarousel() {
               </motion.div>
             </div>
           </Overlay>
-        </div>
+        </div> */}
 
         {/* IMAGE SLIDE 3 - Index 2 */}
         {/* <div className="relative h-[100vh]" key={`image-2-${selectedSlide}`}>
