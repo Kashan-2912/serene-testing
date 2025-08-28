@@ -102,7 +102,7 @@
   right: -20px;
 } */
 
-html {
+/* html {
   -webkit-text-size-adjust: 100%;
 }
 
@@ -115,4 +115,4 @@ body {
 input, select, textarea {
   font-size: 16px; /* Prevents zoom */
   -webkit-appearance: none;
-}
+} */

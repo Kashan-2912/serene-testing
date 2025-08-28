@@ -38,23 +38,23 @@ export default {
       fontFamily: {
         helvetica: ['"Helvetica Neue LT Std"', 'sans-serif'],
       },
-      minHeight: {
-        'screen-ios': '-webkit-fill-available',
-      },
-      height: {
-        'screen-ios': '-webkit-fill-available',
-      }
+      // minHeight: {
+      //   'screen-ios': '-webkit-fill-available',
+      // },
+      // height: {
+      //   'screen-ios': '-webkit-fill-available',
+      // }
     },
   },
   // plugins: [require("tailwind-scrollbar")],
-  plugins: [
-    function({ addUtilities }) {
-      addUtilities({
-        '.no-zoom': {
-          'font-size': '16px',
-          '-webkit-appearance': 'none',
-        }
-      })
-    }
-  ]
+  // plugins: [
+  //   function({ addUtilities }) {
+  //     addUtilities({
+  //       '.no-zoom': {
+  //         'font-size': '16px',
+  //         '-webkit-appearance': 'none',
+  //       }
+  //     })
+  //   }
+  // ]
 };
