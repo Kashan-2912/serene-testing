@@ -76,6 +76,12 @@ const inter = Inter({
 export const metadata = {
   title: "Serene Heights Nathia Gali",
   description: "Serene Heights Nathia Gali",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 export default function RootLayout({ children }) {
   // const headersList = headers();

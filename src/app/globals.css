@@ -101,3 +101,18 @@
 .custom-arrow-right {
   right: -20px;
 } */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* iOS Safari fixes */
+input, select, textarea {
+  font-size: 16px; /* Prevents zoom */
+  -webkit-appearance: none;
+}

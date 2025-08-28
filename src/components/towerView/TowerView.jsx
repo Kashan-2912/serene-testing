@@ -398,7 +398,7 @@ function TowerView() {
               <img
                 src="/assets/logo/logo.png"
                 alt="logo"
-                className="h-[80px] w-[80px] mb-1 sm:w-full sm:h-[100px] md:h-[150px]"
+                className="h-[80px] w-[80px] mb-1 sm:w-full sm:h-[100px] md:h-[150px] object-contain"
               />
               <button
                 className="cursor-pointer border text-xs sm:text-base flex items-center gap-2 md:gap-1 border-white rounded-lg text-white py-2 px-2 sm:px-4"
