@@ -315,10 +315,10 @@ function TowerView() {
                 const floor8 = floorsFront.find((f) => f.name === "Floor 8");
                 return floor8 ? (
                   <div
-                    className="absolute "
+                    className="absolute top-[22%] md:top-[21%] md:left-[58%] sm:top-[22%] sm:left-[64%] xs:top-[22%] xs:left-[78%] cursor-pointer"
                     style={{
-                      top: "21%",
-                      left: "58%",
+                      // top: "21%",
+                      // left: "58%",
                       transform: "translateX(-50%)",
                     }}
                   >
